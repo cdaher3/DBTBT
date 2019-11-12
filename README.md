@@ -4,8 +4,8 @@ The intent of this project is to build a website that helps its users make sound
 
 ## Topic requirements  
 Data storage  
-Mobile
-Server-Side?
+Mobile  
+Server-Side?  
 Authentication?  
 
 ## Team members
