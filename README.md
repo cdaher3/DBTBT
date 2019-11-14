@@ -13,3 +13,8 @@ Authentication?
 [Yannis Lam](https://github.com/cdaher3/DBTBT/blob/master/team/Yannis_Lam.md)  
 [Bhogesh Maddirala](https://github.com/cdaher3/DBTBT/blob/master/team/Bhogesh_Maddirala.md)  
 [Matthew Lehoullier](https://github.com/cdaher3/DBTBT/blob/master/team/Matthew_Lehoullier.md)  
+
+
+# awstest Branch: root folder is currently pullable into the apache directory on the server  
+log in, cd to /var/www/html, run sudo git pull  
+if it doesn't work, sudo
