@@ -18,3 +18,4 @@ Authentication?
 # awstest Branch: root folder is currently pullable into the apache directory on the server  
 log in, cd to /var/www/html, run sudo git pull  
 if it doesn't work, sudo
+Now running Node.js with Express
