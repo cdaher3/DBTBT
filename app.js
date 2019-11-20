@@ -1,5 +1,5 @@
 const net = require('net');
-const port = 3000;
+const port = 443;
 const host = 'localhost';
 const scraper = require('amazon-buddy');
 
