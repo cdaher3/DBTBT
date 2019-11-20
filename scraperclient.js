@@ -1,11 +1,13 @@
 const net = require('net');
 const client = new net.Socket();
-const port = 3000;
-const host = 'localhost';
+const port = 443;
+const host = '35.221.43.110';
+
+let request = "carpet";
 
 client.connect(port, host, function(){
   console.log('Connected');
-  client.write('Xbox One');
+  client.write(request);
 });
 
 client.on('data', function(data){
