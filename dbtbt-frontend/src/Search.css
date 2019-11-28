@@ -2,7 +2,7 @@
   border: 1px solid #e65100;
   box-shadow: 0 0 0 1px #e65100;
   margin: auto;
-  width: 65%;
+  width: 62%;
   padding: 20px;
 }
 .active-blue-3 input[type=text] {
@@ -17,14 +17,12 @@
   margin: auto;
   padding: 30px;
   display: flex;
-  width: 30%;
+  width: 25%;
   justify-content: center;
 }
 
 .results{
   margin: auto;
-  /* padding: 30px; */
-  /* display: flex; */
   width: 60%;
   justify-content: center;
 }

@@ -45,14 +45,14 @@ export default class Search extends React.Component {
   render() {
     return (
       <div className="active-orange-4 active-blue-3 mb-3">
-        <MDBRow>
+        <form>
           <input className="form-control" type="text" placeholder="Search" aria-label="Search" onChange={this.filterList} />
-        </MDBRow>
+        </form>
         <div className="buttons">
-        <MDBRow>
-          <MDBBtn color="blue">Search</MDBBtn>
-          <MDBBtn color="blue">Reset</MDBBtn>
-        </MDBRow>
+          <MDBRow>
+            <MDBBtn color="blue">Reset</MDBBtn>
+            <MDBBtn color="blue">Search</MDBBtn>
+          </MDBRow>
         </div>
         <div className="results">
           {
