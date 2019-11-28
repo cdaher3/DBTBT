@@ -10,23 +10,23 @@ import "mdbreact/dist/css/mdb.css";
 
 function App() {
   //temporary hardcoded search data
-  let searchInput =
-    [
-      "Afghanistan",
-      "Åland Islands",
-      "Albania",
-      "Algeria",
-      "John",
-      "Mark",
-      "Matthew",
-      "Luke",
-    ];
+  // let searchInput =
+  //   [
+  //   "Afghanistan",
+  //   "Åland Islands",
+  //   "Albania",
+  //   "Algeria",
+  //   "John",
+  //   "Mark",
+  //   "Matthew",
+  //   "Luke",
+  //   ];
   return (
+      // <ListSearch />
+    
     <div>
-      <NavbarPage />
-      <h1> Don't Buy That, Buy This!</h1>
-      <h4> (Insert Logo Here)</h4>
-      <Search content={searchInput} />
+    <NavbarPage/>
+    {/* <Search content={searchInput} /> */}
     </div>
   );
 }

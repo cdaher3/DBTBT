@@ -1,9 +1,12 @@
 import React from 'react';
 
-export default class MyFilteringComponent extends React.Component {
-    state = {
-        initialItems: [],
-        items: []
+export default class Search extends React.Component {
+    constructor(props){
+      super(props);
+      this.state = {
+          initialItems: [],
+          items: []
+      }
     }
 
     filterList = (event) => {
