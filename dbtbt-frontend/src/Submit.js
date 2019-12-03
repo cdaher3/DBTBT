@@ -20,10 +20,6 @@ import "./Search.css";
 import NavbarPage from "./NavbarPage";
 
 export default class Submit extends React.Component {
-  state = {
-    characters: []
-  };
-  
   constructor(props) {
     super(props);
     this.initialState = {
@@ -33,13 +29,13 @@ export default class Submit extends React.Component {
     this.state = this.initialState;
   }
 
-  filterList = event => {
-    let items = this.state.initialItems;
-    items = items.filter(item => {
-      return item.toLowerCase().search(event.target.value.toLowerCase()) !== -1;
-    });
-    this.setState({ items: items });
-  };
+  // filterList = event => {
+  //   let items = this.state.initialItems;
+  //   items = items.filter(item => {
+  //     return item.toLowerCase().search(event.target.value.toLowerCase()) !== -1;
+  //   });
+  //   this.setState({ items: items });
+  // };
 
   componentWillMount = () => {
     this.setState({
@@ -54,7 +50,16 @@ export default class Submit extends React.Component {
     this.setState(this.initialState);
   };
 
+  handleChange = event => {
+    const { name, value } = event.target;
+
+    this.setState({
+      [name]: value
+    });
+  };
+
   render() {
+    const { submit } = this.state;
     return (
       <div>
         <NavbarPage />
@@ -62,7 +67,7 @@ export default class Submit extends React.Component {
         <h4> (Insert Logo Here)</h4>
 
         <div className="active-orange-4 active-blue-3 mb-3">
-          <form>
+          <form onSubmit={this.onFormSubmit}>
             <input
               className="form-control"
               type="text"
@@ -70,15 +75,16 @@ export default class Submit extends React.Component {
               aria-label="Search"
               onChange={this.filterList}
             />
+            <div className="buttons">
+              <MDBRow>
+                <MDBBtn color="blue">Reset</MDBBtn>
+                <MDBBtn color="blue" type="submit" onSubmit={this.onFormSubmit}>
+                  Search
+                </MDBBtn>
+              </MDBRow>
+            </div>
           </form>
-          <div className="buttons">
-            <MDBRow>
-              <MDBBtn color="blue">Reset</MDBBtn>
-              <MDBBtn color="blue" onSubmit={this.onFormSubmit}>
-                Search
-              </MDBBtn>
-            </MDBRow>
-          </div>
+
           <div className="results">
             {/* {
             this.state.items.map(function (item) {
@@ -89,6 +95,6 @@ export default class Submit extends React.Component {
         </div>
       </div>
     );
-    console.log(this.state.submit);
+    console.log(this.state);
   }
 }
