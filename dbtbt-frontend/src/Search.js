@@ -47,8 +47,8 @@ export default class Search extends React.Component {
     return (
       <div>
         <NavbarPage />
-            <h1> Don't Buy That, Buy This!</h1>
-            <h4> (Insert Logo Here)</h4>
+        <h1> Don't Buy That, Buy This!</h1>
+        <h4> (Insert Logo Here)</h4>
 
       <div className="active-orange-4 active-blue-3 mb-3">
         <form>

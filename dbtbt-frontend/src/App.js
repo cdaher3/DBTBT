@@ -3,6 +3,7 @@ import "./App.css";
 import Search from "./Search";
 import Submit from "./Submit";
 import Main from "./Main";
+import NavbarPage from './NavbarPage';
 // import Form from './form';
 // import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
@@ -23,9 +24,10 @@ function App() {
   return (
     <div>
       {/* <Main /> */}
-      <Search content={searchInput} />
-      {/* <Submit content={searchInput} /> */}
+      {/* <Search content={searchInput} /> */}
+      <Submit content={searchInput} />
       {/* <HomePage /> */}
+      {/* <NavbarPage/> */}
     </div>
   );
 }
