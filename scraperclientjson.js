@@ -3,9 +3,8 @@ const jsonSocket = require('json-socket');
 const port = 443;
 const host = '35.221.43.110';
 
-let socket = new jsonSocket(new net.Socket());
-
 search = async function(searchTerm, callback){
+  let socket = new jsonSocket(new net.Socket());
   socket.connect(port, host);
   socket.on('connect', function(){
     socket.sendMessage(searchTerm);
