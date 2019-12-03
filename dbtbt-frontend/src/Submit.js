@@ -19,13 +19,14 @@ import SectionContainer from "./components/sectionContainer";
 import "./Search.css";
 import NavbarPage from './NavbarPage';
 
-export default class Search extends React.Component {
+export default class Submit extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      initialItems: [],
-      items: []
-    }
+    this.initialState = {
+        submit: '',
+    };
+
+    this.state = this.initialState;
   }
 
   filterList = (event) => {
@@ -43,11 +44,17 @@ export default class Search extends React.Component {
     })
   }
 
+  onFormSubmit = (event) => {
+    event.preventDefault();
+    this.props.handleSubmit(this.state);
+    this.setState(this.initialState);
+}
+
   render() {
     return (
       <div>
         <NavbarPage />
-            <h1> Don't Buy That, Buy This!</h1>
+            <h1> Don't Buy That, Buy This! (Submit Version)</h1>
             <h4> (Insert Logo Here)</h4>
 
       <div className="active-orange-4 active-blue-3 mb-3">
@@ -57,18 +64,19 @@ export default class Search extends React.Component {
         <div className="buttons">
           <MDBRow>
             <MDBBtn color="blue">Reset</MDBBtn>
-            <MDBBtn color="blue">Search</MDBBtn>
+            <MDBBtn color="blue" onSubmit={this.onFormSubmit}>Search</MDBBtn>
           </MDBRow>
         </div>
         <div className="results">
-          {
+          {/* {
             this.state.items.map(function (item) {
               return <div key={item}>{item}</div>
             })
-          }
+          } */}
         </div>
       </div>
       </div>
     );
+    console.log(this.state.submit);
   }
 };

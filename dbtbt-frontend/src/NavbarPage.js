@@ -3,7 +3,8 @@ import {
   MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
   MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon
 } from "mdbreact";
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Main from './Main';
 
 export default class NavbarPage extends Component {
   state = {
@@ -62,6 +63,9 @@ export default class NavbarPage extends Component {
             </MDBNavbarNav>
           </MDBCollapse>
         </MDBNavbar>
+        {/* <Switch>
+          <Route exact path ='/' component={Main} />
+        </Switch> */}
       </Router>
     );
   }
