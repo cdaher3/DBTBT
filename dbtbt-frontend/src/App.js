@@ -5,7 +5,6 @@ import Submit from "./Submit";
 import Main from "./Main";
 import NavbarPage from "./NavbarPage";
 // import Form from './form';
-// import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 
@@ -31,6 +30,8 @@ class App extends Component{
   };
 
   render(){
+    console.log(this.state);
+    console.log(this.state.characters);
   return (
     <div>
       {/* <Main /> */}

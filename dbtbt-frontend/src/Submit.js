@@ -23,26 +23,11 @@ export default class Submit extends React.Component {
   constructor(props) {
     super(props);
     this.initialState = {
-      submit: ""
+      name: ""
     };
 
     this.state = this.initialState;
   }
-
-  // filterList = event => {
-  //   let items = this.state.initialItems;
-  //   items = items.filter(item => {
-  //     return item.toLowerCase().search(event.target.value.toLowerCase()) !== -1;
-  //   });
-  //   this.setState({ items: items });
-  // };
-
-  componentWillMount = () => {
-    this.setState({
-      initialItems: this.props.content,
-      items: this.props.content
-    });
-  };
 
   onFormSubmit = event => {
     event.preventDefault();
@@ -59,7 +44,7 @@ export default class Submit extends React.Component {
   };
 
   render() {
-    const { submit } = this.state;
+    const { name } = this.state;
     return (
       <div>
         <NavbarPage />
@@ -73,16 +58,30 @@ export default class Submit extends React.Component {
               type="text"
               placeholder="Search"
               aria-label="Search"
-              onChange={this.filterList}
+              // value={submit}
+              onChange={this.handleChange}
             />
             <div className="buttons">
               <MDBRow>
                 <MDBBtn color="blue">Reset</MDBBtn>
-                <MDBBtn color="blue" type="submit" onSubmit={this.onFormSubmit}>
+                <MDBBtn color="blue" type="submit">
                   Search
                 </MDBBtn>
               </MDBRow>
             </div>
+          </form>
+
+          <form onSubmit={this.onFormSubmit}>
+            <input
+              type="text"
+              name="name"
+              value={name}
+              placeholder="Search"
+              onChange={this.handleChange}
+            />
+            <MDBBtn color="blue" type="submit">
+              Submit
+            </MDBBtn>
           </form>
 
           <div className="results">
