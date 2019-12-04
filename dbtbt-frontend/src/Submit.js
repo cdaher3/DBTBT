@@ -25,6 +25,7 @@ export default class Submit extends React.Component {
     this.initialState = {
       submit: "",
       query: "",
+      data: [],
     };
     this.state = this.initialState;
   }
@@ -33,7 +34,9 @@ export default class Submit extends React.Component {
     console.log("queried!");
     console.log(q);
     console.log(fetch(q));
-    
+    fetch(q)
+    .then(response => response.json());
+    // .then(data => this.setState({ data }));
   }
 
   onFormSubmit = event => {
