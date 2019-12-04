@@ -13,11 +13,11 @@ import {
   MDBBtn,
   MDBListGroup,
   MDBListGroupItem,
-  MDBCard, 
-  MDBCardBody, 
-  MDBCardImage, 
-  MDBCardTitle, 
-  MDBCardText 
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBCardTitle,
+  MDBCardText
 } from "mdbreact";
 import DocsLink from "./components/docsLink";
 import SectionContainer from "./components/sectionContainer";
@@ -47,38 +47,38 @@ export default class SearchResults extends React.Component {
         <h1> Don't Buy That, Buy This!</h1>
         <h2>(Search Results Page)</h2>
         <h4> (Insert Logo Here)</h4>
-        <MDBCol>
-          <MDBCard style={{ width: "22rem" }}>
-            <MDBCardImage
-              className="img-fluid"
-              src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg"
-              waves
-            />
-            <MDBCardBody>
-              <MDBCardTitle>Card title</MDBCardTitle>
-              <MDBCardText>
-                Some quick example text to build on the card title and make up
-                the bulk of the card&apos;s content.
-              </MDBCardText>
-              <MDBBtn href="#">MDBBtn</MDBBtn>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
+
         {/* {carpet.map((item, index)) => {
                     return <h1>{item[index].asin}</h1>
                 }
                 } */}
         {this.state.data.map((item, index) => (
-          <div>
-            <span>ASIN: {item.asin}, </span>
-            <span>Discounted: {item.discounted}, </span>
-            <span>Sponsored: {item.sponsored}, </span>
-            <span>Reviews: {item.reviews}, </span>
-            <span>Rating: {item.rating}, </span>
-            <span>Score: {item.score}, </span>
-            <span>Savings: {item.savings}, </span>
-            <span>Price: {item.price}, </span>
-            <span>Title: {item.title}</span>
+          //   <div>
+          //     <span>ASIN: {item.asin}, </span>
+          //     <span>Discounted: {item.discounted}, </span>
+          //     <span>Sponsored: {item.sponsored}, </span>
+          //     <span>Reviews: {item.reviews}, </span>
+          //     <span>Rating: {item.rating}, </span>
+          //     <span>Score: {item.score}, </span>
+          //     <span>Savings: {item.savings}, </span>
+          //     <span>Price: {item.price}, </span>
+          //     <span>Title: {item.title}</span>
+          //   </div>
+          <div className="results">
+            <MDBCol>
+              <MDBCard>
+                <MDBCardImage className="img-fluid" src="" waves />
+                <MDBCardBody>
+                  <h4>{item.title}</h4>
+                  <MDBCardText>
+                      <div>ASIN: {item.asin},</div>
+                    <span>Rating: {item.rating}, </span>
+                    <span>Price: {item.price}, </span>
+                  </MDBCardText>
+                  <MDBBtn href="#">More</MDBBtn>
+                </MDBCardBody>
+              </MDBCard>
+            </MDBCol>
           </div>
         ))}
       </div>
