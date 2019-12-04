@@ -23,9 +23,9 @@ export default class Submit extends React.Component {
   constructor(props) {
     super(props);
     this.initialState = {
-      name: ""
+      submit: "",
+      query: "",
     };
-
     this.state = this.initialState;
   }
 
@@ -33,32 +33,43 @@ export default class Submit extends React.Component {
     event.preventDefault();
     this.props.handleSubmit(this.state);
     this.setState(this.initialState);
+    console.log("clicked search");
+    console.log("state");
+    console.log(this.state);
   };
 
   handleChange = event => {
-    const { name, value } = event.target;
-
+    let { name, value } = event.target;
+    // console.log(event);
+    // console.log(event.target);
+    // console.log(name);
+    // console.log(value);
+    let newQuery = "http://dbtbt.com:3001/search/" + value;
     this.setState({
-      [name]: value
+      [name]: value,
+      "query": newQuery,
     });
   };
 
   render() {
-    const { name } = this.state;
+    let { submit, query } = this.state;
+
+    // console.log(this.state);
+    // console.log(this.state.submit);
     return (
       <div>
         <NavbarPage />
-        <h1> Don't Buy That, Buy This! (Submit Version)</h1>
+        <h1> Don't Buy That, Buy This!</h1>
+        <h2>(Submit Version)</h2>
         <h4> (Insert Logo Here)</h4>
-
         <div className="active-orange-4 active-blue-3 mb-3">
           <form onSubmit={this.onFormSubmit}>
             <input
               className="form-control"
               type="text"
+              name="submit"
+              value={submit}
               placeholder="Search"
-              aria-label="Search"
-              // value={submit}
               onChange={this.handleChange}
             />
             <div className="buttons">
@@ -71,29 +82,16 @@ export default class Submit extends React.Component {
             </div>
           </form>
 
-          <form onSubmit={this.onFormSubmit}>
-            <input
-              type="text"
-              name="name"
-              value={name}
-              placeholder="Search"
-              onChange={this.handleChange}
-            />
-            <MDBBtn color="blue" type="submit">
-              Submit
-            </MDBBtn>
-          </form>
-
           <div className="results">
             {/* {
             this.state.items.map(function (item) {
               return <div key={item}>{item}</div>
             })
           } */}
+            {query}
           </div>
         </div>
       </div>
     );
-    console.log(this.state);
   }
 }

@@ -30,13 +30,14 @@ class App extends Component{
   };
 
   render(){
-    console.log(this.state);
-    console.log(this.state.characters);
+    // console.log(this.state);
+    // console.log(this.state.characters);
   return (
     <div>
       {/* <Main /> */}
       {/* <Search content={searchInput} /> */}
       <Submit handleSubmit={this.handleSubmit} />
+      {/* <Submit /> */}
       {/* <HomePage /> */}
       {/* <NavbarPage/> */}
     </div>
