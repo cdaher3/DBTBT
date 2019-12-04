@@ -4,9 +4,12 @@ import Search from "./Search";
 import Submit from "./Submit";
 import Main from "./Main";
 import NavbarPage from "./NavbarPage";
+import SearchResults from "./SearchResults";
+// import fruit from "./fruit";
 // import Form from './form';
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
+import carpet from "./carpet.json";
 
 class App extends Component{
   //temporary hardcoded search data
@@ -32,6 +35,7 @@ class App extends Component{
   render(){
     // console.log(this.state);
     // console.log(this.state.characters);
+    // console.log(carpet);
   return (
     <div>
       {/* <Main /> */}
@@ -40,6 +44,7 @@ class App extends Component{
       {/* <Submit /> */}
       {/* <HomePage /> */}
       {/* <NavbarPage/> */}
+      <SearchResults content={carpet}/>
     </div>
   );
   }

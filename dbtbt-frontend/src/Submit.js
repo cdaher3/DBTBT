@@ -28,6 +28,13 @@ export default class Submit extends React.Component {
     };
     this.state = this.initialState;
   }
+  
+  query = (q) => {
+    console.log("queried!");
+    console.log(q);
+    // fetch(q)
+    fetch("http://dbtbt.com:3001/search/aaa")
+  }
 
   onFormSubmit = event => {
     event.preventDefault();
@@ -36,6 +43,7 @@ export default class Submit extends React.Component {
     console.log("clicked search");
     console.log("state");
     console.log(this.state);
+    this.query(this.state.query);
   };
 
   handleChange = event => {
@@ -53,9 +61,6 @@ export default class Submit extends React.Component {
 
   render() {
     let { submit, query } = this.state;
-
-    // console.log(this.state);
-    // console.log(this.state.submit);
     return (
       <div>
         <NavbarPage />
@@ -74,7 +79,7 @@ export default class Submit extends React.Component {
             />
             <div className="buttons">
               <MDBRow>
-                <MDBBtn color="blue">Reset</MDBBtn>
+                <MDBBtn color="blue">Clear</MDBBtn>
                 <MDBBtn color="blue" type="submit">
                   Search
                 </MDBBtn>
