@@ -32,8 +32,8 @@ export default class Submit extends React.Component {
   query = (q) => {
     console.log("queried!");
     console.log(q);
-    // fetch(q)
-    fetch("http://dbtbt.com:3001/search/aaa")
+    console.log(fetch(q));
+    
   }
 
   onFormSubmit = event => {
