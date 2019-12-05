@@ -6,13 +6,13 @@ let app = express();
 
 app.use(cors());
 
-// let dbconn = mysql.createConnection ({
-//   host: "dbtbt326.cjwujllbnqqi.us-east-1.rds.amazonaws.com",
-//   port: "3306",
-//   user: "mlehoullier",
-//   password: "DBTBT326",
-//   database: "mydb"
-// })
+let con = mysql.createConnection ({
+  host: "dbtbt326.cjwujllbnqqi.us-east-1.rds.amazonaws.com",
+  port: "3306",
+  user: "mlehoullier",
+  password: "DBTBT326",
+  database: "mydb"
+})
 
 
 
@@ -26,10 +26,24 @@ app.get("/search/:searchterm", (req, res) => {
   });
 });
 
-// app.get("/query/ticker=:ticker", (req, res) => {
-//
-// });
-//
-// app.get("/query/price=:price", (req, res) => {
-//
-// });
+app.get("/query/ticker=:ticker", (req, res) => {
+ con.connect(function(err) {
+ if (err) throw err;
+ var sql = "SELECT Ticker_symbol, Price from Stocks where Ticker_symbol = ticker";
+ con.query(sql, function (err, result, fields) {
+ if (err) throw err;
+ console.log(result)
+   });
+});
+
+app.get("/query/price=:price", (req, res) => {
+con.connect(function(err) {
+if (err) throw err;
+var sql = "select Ticker_symbol, Price from Stocks Where Price < '32' Order by Price desc limit 1";
+con.query(sql, function (err, result, fields) {
+if (err) throw err;
+console.log(result)
+  });
+});
+});
+});
