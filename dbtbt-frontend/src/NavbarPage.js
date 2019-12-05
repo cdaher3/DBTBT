@@ -6,6 +6,8 @@ import {
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Main from './Main';
 import App from './App';
+import Submit from './Submit';
+import About from './About';
 
 export default class NavbarPage extends Component {
   state = {
@@ -27,13 +29,13 @@ export default class NavbarPage extends Component {
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav left>
               <MDBNavItem active>
-                <MDBNavLink to={"/"}>Home</MDBNavLink>
+                <MDBNavLink to={`/`}>Home</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
                 <MDBNavLink to="/">Documentation</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to = "/"> About</MDBNavLink>
+                <MDBNavLink to = "/about"> About</MDBNavLink>
               </MDBNavItem>
             </MDBNavbarNav>
             <MDBNavbarNav right>
@@ -56,7 +58,10 @@ export default class NavbarPage extends Component {
             </MDBNavbarNav>
           </MDBCollapse>
         </MDBNavbar>
-        {/* <Route path="/" component={App} /> */}
+        <Switch>
+          <Route path="/" exact component={Submit} />
+          <Route path="/about" exact component={About} />
+        </Switch>
       </Router>
     );
   }

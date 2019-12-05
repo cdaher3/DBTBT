@@ -76,7 +76,6 @@ export default class Submit extends React.Component {
     let { submit, query, data } = this.state;
     return (
       <div>
-        <NavbarPage />
         <h1> Don't Buy This, Buy That!</h1>
         <h2> <img src = {logo} alt = "DBTBT Logo"></img></h2>
         <div className="active-orange-4 active-blue-3 mb-3">

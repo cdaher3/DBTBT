@@ -44,7 +44,6 @@ export default class SearchResults extends React.Component {
     console.log(this.state);
     return (
       <div>
-        <NavbarPage />
         <h1> Don't Buy This, Buy That!</h1>
         <h2>Search Results</h2>
                 {/* {carpet.map((item, index)) => {

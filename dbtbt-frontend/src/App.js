@@ -27,13 +27,14 @@ class App extends Component{
     // console.log(carpet);
   return (
     <div>
+      <NavbarPage/>
       {/* <Main /> */}
       {/* <Search content={searchInput} /> */}
-      <Submit handleSubmit={this.handleSubmit} />
+      {/* <Submit handleSubmit={this.handleSubmit} /> */}
       {/* <Submit /> */}
       {/* <HomePage /> */}
-      {/* <NavbarPage/> */}
-      <SearchResults comp={carpet}/>
+      
+      {/* <SearchResults comp={carpet}/> */}
     </div>
   );
   }
