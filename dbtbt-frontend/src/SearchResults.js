@@ -24,6 +24,7 @@ import SectionContainer from "./components/sectionContainer";
 import "./Search.css";
 import NavbarPage from "./NavbarPage";
 import Carpet from "./carpet.json";
+import logo from "./dbtbtlogo.png";
 
 export default class SearchResults extends React.Component {
   constructor(props) {
@@ -44,9 +45,9 @@ export default class SearchResults extends React.Component {
     return (
       <div>
         <NavbarPage />
-        <h1> Don't Buy That, Buy This!</h1>
-        <h2>(Search Results Page)</h2>
-        <h4> (Insert Logo Here)</h4>
+        <h1> Don't Buy This, Buy That!</h1>
+        <h2><img src = {logo} alt = "DBTBT Logo"></img></h2>
+        <h4> (Search Results Page)</h4>
 
         {/* {carpet.map((item, index)) => {
                     return <h1>{item[index].asin}</h1>

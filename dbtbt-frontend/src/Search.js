@@ -18,6 +18,7 @@ import DocsLink from "./components/docsLink";
 import SectionContainer from "./components/sectionContainer";
 import "./Search.css";
 import NavbarPage from './NavbarPage';
+import logo from "./dbtbtlogo.png";
 
 export default class Search extends React.Component {
   constructor(props) {
@@ -48,7 +49,7 @@ export default class Search extends React.Component {
       <div>
         <NavbarPage />
         <h1> Don't Buy That, Buy This!</h1>
-        <h4> (Insert Logo Here)</h4>
+        <h4><img src = {logo} alt = "DBTBT Logo"></img></h4>
 
       <div className="active-orange-4 active-blue-3 mb-3">
         <form>

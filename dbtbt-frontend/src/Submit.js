@@ -18,6 +18,7 @@ import DocsLink from "./components/docsLink";
 import SectionContainer from "./components/sectionContainer";
 import "./Search.css";
 import NavbarPage from "./NavbarPage";
+import logo from "./dbtbtlogo.png";
 
 export default class Submit extends React.Component {
   constructor(props) {
@@ -67,9 +68,8 @@ export default class Submit extends React.Component {
     return (
       <div>
         <NavbarPage />
-        <h1> Don't Buy That, Buy This!</h1>
-        <h2>(Submit Version)</h2>
-        <h4> (Insert Logo Here)</h4>
+        <h1> Don't Buy This, Buy That!</h1>
+        <h2> <img src = {logo} alt = "DBTBT Logo"></img></h2>
         <div className="active-orange-4 active-blue-3 mb-3">
           <form onSubmit={this.onFormSubmit}>
             <input
