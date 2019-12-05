@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import Search from "./Search";
 import Submit from "./Submit";
-import Main from "./Main";
 import NavbarPage from "./NavbarPage";
 import SearchResults from "./SearchResults";
 // import fruit from "./fruit";

@@ -4,7 +4,6 @@ import {
   MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon
 } from "mdbreact";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Main from './Main';
 import App from './App';
 import Submit from './Submit';
 import About from './About';
