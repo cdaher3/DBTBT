@@ -26,3 +26,10 @@
   /* justify-content: center; */
   width: 80%;
 }
+
+h4 {
+  margin: auto;
+  text-align: center;
+  width: 85%;
+  padding: 5px;
+}
