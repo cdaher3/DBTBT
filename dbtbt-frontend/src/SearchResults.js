@@ -46,9 +46,7 @@ export default class SearchResults extends React.Component {
       <div>
         <NavbarPage />
         <h1> Don't Buy This, Buy That!</h1>
-        <h2><img src = {logo} alt = "DBTBT Logo"></img></h2>
-        <h4> (Search Results Page)</h4>
-
+        <h2>Search Results</h2>
                 {/* {carpet.map((item, index)) => {
                     return <h1>{item[index].asin}</h1>
                 }
