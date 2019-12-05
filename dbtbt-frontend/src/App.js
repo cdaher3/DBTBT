@@ -38,7 +38,7 @@ class App extends Component{
     // console.log(carpet);
   return (
     <div>
-      {/* <Main /> */}
+      <Main />
       {/* <Search content={searchInput} /> */}
       <Submit handleSubmit={this.handleSubmit} />
       {/* <Submit /> */}
