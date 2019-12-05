@@ -33,15 +33,7 @@ export default class NavbarPage extends Component {
                 <MDBNavLink to="/">Documentation</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBDropdown>
-                  <MDBDropdownToggle nav caret>
-                    <div className="d-none d-md-inline">About Us</div>
-                  </MDBDropdownToggle>
-                  <MDBDropdownMenu className="dropdown-default">
-                    <MDBDropdownItem href="#!">Team</MDBDropdownItem>
-                    <MDBDropdownItem href="/Main">Technologies</MDBDropdownItem>
-                  </MDBDropdownMenu>
-                </MDBDropdown>
+                <MDBNavLink to = "/"> About</MDBNavLink>
               </MDBNavItem>
             </MDBNavbarNav>
             <MDBNavbarNav right>

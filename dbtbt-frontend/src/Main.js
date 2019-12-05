@@ -20,8 +20,8 @@ export default class Main extends Component {
     return (
       <div>
         <NavbarPage />
-        <h1> About Us Page</h1>
-        <h4> (Temporary)</h4>
+        <h1> About</h1>
+        <h4></h4>
       </div>
     );
   }
