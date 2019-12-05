@@ -44,7 +44,7 @@ class App extends Component{
       {/* <Submit /> */}
       {/* <HomePage /> */}
       {/* <NavbarPage/> */}
-      <SearchResults content={carpet}/>
+      <SearchResults comp={carpet}/>
     </div>
   );
   }

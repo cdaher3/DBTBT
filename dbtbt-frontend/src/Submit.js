@@ -18,6 +18,7 @@ import DocsLink from "./components/docsLink";
 import SectionContainer from "./components/sectionContainer";
 import "./Search.css";
 import NavbarPage from "./NavbarPage";
+import SearchResults from "./SearchResults";
 
 export default class Submit extends React.Component {
   constructor(props) {
@@ -30,13 +31,21 @@ export default class Submit extends React.Component {
     this.state = this.initialState;
   }
   
+  launch = (l) => {
+    console.log("launched!")
+    
+  }
+
   query = (q) => {
     console.log("queried!");
     console.log(q);
-    console.log(fetch(q));
     fetch(q)
-    .then(response => response.json());
-    // .then(data => this.setState({ data }));
+    .then(response => response.json())
+    .then(data => {
+      console.log(data)
+      this.launch(data)
+      // <SearchResults comp={data}/>
+    });
   }
 
   onFormSubmit = event => {
@@ -44,8 +53,8 @@ export default class Submit extends React.Component {
     this.props.handleSubmit(this.state);
     this.setState(this.initialState);
     console.log("clicked search");
-    console.log("state");
-    console.log(this.state);
+    // console.log("state");
+    // console.log(this.state);
     this.query(this.state.query);
   };
 
@@ -63,7 +72,7 @@ export default class Submit extends React.Component {
   };
 
   render() {
-    let { submit, query } = this.state;
+    let { submit, query, data } = this.state;
     return (
       <div>
         <NavbarPage />
@@ -97,6 +106,7 @@ export default class Submit extends React.Component {
             })
           } */}
             {query}
+            {/* <SearchResults comp={data}/> */}
           </div>
         </div>
       </div>
