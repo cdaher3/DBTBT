@@ -24,7 +24,7 @@ app.get("/query/ticker=:ticker", (req, res) => {
 });
 
 app.get("/query/price=:price", (req, res) => {
-  query.query("SELECT Ticker_symbol, Price from Stocks where Price < '" + req.params.price + "' Order by Price desc limit 1", function(result){
+  query.query("SELECT Ticker_symbol, Price, Official_name from Stocks where Price < '" + req.params.price + "' Order by Price desc limit 1", function(result){
     res.json(result);
   });
 });
