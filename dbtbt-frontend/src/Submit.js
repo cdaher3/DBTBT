@@ -19,6 +19,7 @@ import SectionContainer from "./components/sectionContainer";
 import "./Search.css";
 import NavbarPage from "./NavbarPage";
 import logo from "./dbtbtlogo.png";
+import SearchResults from "./SearchResults";
 
 export default class Submit extends React.Component {
   constructor(props) {
@@ -99,13 +100,8 @@ export default class Submit extends React.Component {
           </form>
 
           <div className="results">
-            {/* {
-            this.state.items.map(function (item) {
-              return <div key={item}>{item}</div>
-            })
-          } */}
             {query}
-            {/* <SearchResults comp={data}/> */}
+            {/* <SearchResults comp={}/> */}
           </div>
         </div>
       </div>

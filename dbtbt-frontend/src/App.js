@@ -12,17 +12,6 @@ import "mdbreact/dist/css/mdb.css";
 import carpet from "./carpet.json";
 
 class App extends Component{
-  //temporary hardcoded search data
-  // let searchInput = [
-  //   "Afghanistan",
-  //   "Åland Islands",
-  //   "Albania",
-  //   "Algeria",
-  //   "John",
-  //   "Mark",
-  //   "Matthew",
-  //   "Luke"
-  // ];
 
   state = {
     characters: []
@@ -38,7 +27,7 @@ class App extends Component{
     // console.log(carpet);
   return (
     <div>
-      <Main />
+      {/* <Main /> */}
       {/* <Search content={searchInput} /> */}
       <Submit handleSubmit={this.handleSubmit} />
       {/* <Submit /> */}
