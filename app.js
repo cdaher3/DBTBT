@@ -2,19 +2,10 @@ const express = require("express");
 const cors = require("cors");
 const scraper = require("./scraperclientjson.js");
 const mysql = require("mysql");
+const query = require("./query.js")
 let app = express();
 
 app.use(cors());
-
-let con = mysql.createConnection ({
-  host: "dbtbt326.cjwujllbnqqi.us-east-1.rds.amazonaws.com",
-  port: "3306",
-  user: "mlehoullier",
-  password: "DBTBT326",
-  database: "mydb"
-})
-
-
 
 app.listen(3001, () => {
   console.log("Server running on port 3001");
@@ -27,23 +18,13 @@ app.get("/search/:searchterm", (req, res) => {
 });
 
 app.get("/query/ticker=:ticker", (req, res) => {
- con.connect(function(err) {
- if (err) throw err;
- var sql = "SELECT Ticker_symbol, Price from Stocks where Ticker_symbol = ticker";
- con.query(sql, function (err, result, fields) {
- if (err) throw err;
- console.log(result)
-   });
+  query.query("SELECT Ticker_symbol, Price from Stocks where Ticker_symbol = '" + req.params.ticker + "'", function(result){
+    res.json(result);
+  });
 });
 
 app.get("/query/price=:price", (req, res) => {
-con.connect(function(err) {
-if (err) throw err;
-var sql = "select Ticker_symbol, Price from Stocks Where Price < '32' Order by Price desc limit 1";
-con.query(sql, function (err, result, fields) {
-if (err) throw err;
-console.log(result)
+  query.query("SELECT Ticker_symbol, Price from Stocks where Price < '" + req.params.price + "' Order by Price desc limit 1", function(result){
+    res.json(result);
   });
-});
-});
 });
