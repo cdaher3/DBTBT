@@ -18,7 +18,7 @@ app.get("/search/:searchterm", (req, res) => {
 });
 
 app.get("/query/ticker=:ticker", (req, res) => {
-  query.query("SELECT Ticker_symbol, Price from Stocks where Ticker_symbol = '" + req.params.ticker + "'", function(result){
+  query.query("SELECT Ticker_symbol, Price, Official_name from Stocks where Ticker_symbol = '" + req.params.ticker + "'", function(result){
     res.json(result);
   });
 });
