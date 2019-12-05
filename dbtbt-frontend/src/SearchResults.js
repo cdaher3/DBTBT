@@ -53,7 +53,7 @@ export default class SearchResults extends React.Component {
                     return <h1>{item[index].asin}</h1>
                 }
                 } */}
-                {this.state.data.map((item, index) => (
+                {this.state.data.map((item, index, link) => (
                     //   <div>
                     //     <span>ASIN: {item.asin}, </span>
                     //     <span>Discounted: {item.discounted}, </span>
@@ -65,14 +65,16 @@ export default class SearchResults extends React.Component {
                     //     <span>Price: {item.price}, </span>
                     //     <span>Title: {item.title}</span>
                     //   </div>
-                    <div className="results">
+                    // azLink = "http://www.amazon.com/dp/" + ${item.asin};
+                    link = "http://www.amazon.com/dp/" + item.asin,
+                    <div className="results" key={index}>
                         <MDBCol>
                             <MDBCard>
                                 <MDBCardImage className="img-fluid" src="" waves />
                                 <MDBCardBody>
-                                    <h4>{item.title}</h4>
+                                    <h4><a href={link}>{item.title}</a></h4>
                                     <MDBCardText>
-                                        <div>ASIN: {item.asin},</div>
+                                        {/* <div><a href={link}> ASIN: {item.asin},</a></div> */}
                                         <span>Rating: {item.rating}, </span>
                                         <span>Price: {item.price}, </span>
                                     </MDBCardText>
