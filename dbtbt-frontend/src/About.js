@@ -31,7 +31,7 @@ export default class About extends Component {
           <img src={Christian} alt="Chris" width = "255" height = "300"></img>
             <div className="card-body text-center">
               <h5 className="card-title mb-10">Christian Daher</h5>
-              <div className="card-text text-black-50"> Director of Special Projects</div>
+              <div className="card-text text-black-50"> Developer</div>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ export default class About extends Component {
           <div className="card border-0 shadow">
           <img src={Matthew} alt="Matthew"  width = "255" height = "300"></img>
             <div className="card-body text-center">
-              <h5 className="card-title mb-10">Matthew Lehouillier</h5>
+              <h5 className="card-title mb-10">Matthew Lehoullier</h5>
               <div className="card-text text-black-50">Developer</div>
             </div>
           </div>
