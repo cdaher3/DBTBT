@@ -1,0 +1,35 @@
+.active-orange-4 input[type=text]:focus:not([readonly]) {
+  border: 1px solid #e65100;
+  box-shadow: 0 0 0 1px #e65100;
+  margin: auto;
+  width: 62%;
+  padding: 20px;
+}
+.active-blue-3 input[type=text] {
+  border: 1px solid #1565c0 ;
+  box-shadow: 0 0 0 1px #1565c0 ;
+  margin: auto;
+  width: 60%;
+  padding: 20px;
+}
+
+.buttons{
+  margin: auto;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.results{
+  margin: auto;
+  padding: 15px;
+  /* justify-content: center; */
+  width: 80%;
+}
+
+h4 {
+  margin: auto;
+  text-align: center;
+  width: 85%;
+  padding: 5px;
+}
