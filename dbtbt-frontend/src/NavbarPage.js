@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import App from './App';
 import Submit from './Submit';
 import About from './About';
+import SearchResults from "./SearchResults";
 
 export default class NavbarPage extends Component {
   state = {
@@ -60,6 +61,7 @@ export default class NavbarPage extends Component {
         <Switch>
           <Route path="/" exact component={Submit} />
           <Route path="/about" exact component={About} />
+          <Route path="/search/:id" component={SearchResults}/>
         </Switch>
       </Router>
     );

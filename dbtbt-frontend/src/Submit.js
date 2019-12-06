@@ -20,6 +20,7 @@ import "./Search.css";
 import NavbarPage from "./NavbarPage";
 import logo from "./dbtbtlogo.png";
 import SearchResults from "./SearchResults";
+import carpet from "./carpet.json";
 
 export default class Submit extends React.Component {
   constructor(props) {
@@ -27,26 +28,27 @@ export default class Submit extends React.Component {
     this.initialState = {
       submit: "",
       query: "",
-      data: [],
+      data: [{}],
     };
     this.state = this.initialState;
   }
-  
+
   launch = (l) => {
     console.log("launched!")
-    
+    // <SearchResults comp={this.state.data}/>
   }
 
-  query = (q) => {
+  query = async (q) => {
     console.log("queried!");
     console.log(q);
-    fetch(q)
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
-      this.launch(data)
-      // <SearchResults comp={data}/>
-    });
+    await fetch(q)
+      .then(response => response.json())
+      .then(data => {
+        console.log("data", data)
+        this.setState({ data })
+        this.launch(data)
+        // <SearchResults comp={data}/>
+      });
   }
 
   onFormSubmit = event => {
@@ -75,10 +77,11 @@ export default class Submit extends React.Component {
   render() {
     let { submit, query, data } = this.state;
     console.log("submit state", this.state);
+    console.log("submit data", this.state.data);
     return (
       <div>
         <h1> Don't Buy This, Buy That!</h1>
-        <h2> <img src = {logo} alt = "DBTBT Logo"></img></h2>
+        <h2> <img src={logo} alt="DBTBT Logo"></img></h2>
         <div className="active-orange-4 active-blue-3 mb-3">
           <form onSubmit={this.onFormSubmit}>
             <input
@@ -98,13 +101,11 @@ export default class Submit extends React.Component {
               </MDBRow>
             </div>
           </form>
-
           <div className="results">
-            {query}
-            {/* <SearchResults comp={}/> */}
+            {query} 
           </div>
-        </div>
-      </div>
+        </div >
+      </div >
     );
   }
 }

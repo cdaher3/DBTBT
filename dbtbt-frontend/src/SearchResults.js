@@ -30,22 +30,24 @@ export default class SearchResults extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: []
+            data: null,
+            stock: null,
         };
     }
 
     componentWillMount = () => {
         this.setState({
-            data: this.props.comp
+            data: this.props.comp,
+            stock: this.props.stock
         });
     };
 
-  render() {
-    console.log(this.state);
-    return (
-      <div>
-        <h1> Don't Buy This, Buy That!</h1>
-        <h2>Search Results</h2>
+    render() {
+        console.log(this.state);
+        return (
+            <div>
+                {/* <h1> Don't Buy This, Buy That!</h1> */}
+                <h2>Search Results</h2>
                 {/* {carpet.map((item, index)) => {
                     return <h1>{item[index].asin}</h1>
                 }
@@ -73,6 +75,7 @@ export default class SearchResults extends React.Component {
                                         {/* <div><a href={link}> ASIN: {item.asin},</a></div> */}
                                         <span>Rating: {item.rating}, </span>
                                         <span>Price: {item.price}, </span>
+                                        <span>Reviews: {item.reviews}, </span>
                                     </MDBCardText>
                                     <MDBBtn href="#">More</MDBBtn>
                                 </MDBCardBody>
@@ -80,6 +83,20 @@ export default class SearchResults extends React.Component {
                         </MDBCol>
                     </div>
                 ))}
+
+                {this.state.stock.map((item, index, link) => (
+                    <div className="results" key={index}>
+                        <MDBCol>
+                            <MDBCard>
+                                <MDBCardImage className="img-fluid" src="" waves />
+                                <MDBCardBody>
+                                    <h4><a href={link}>{item.Price}</a></h4>
+                                </MDBCardBody>
+                            </MDBCard>
+                        </MDBCol>
+                    </div>
+                ))}
+
             </div>
         );
     }

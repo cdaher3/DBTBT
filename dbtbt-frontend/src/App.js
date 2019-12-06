@@ -9,6 +9,7 @@ import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import carpet from "./carpet.json";
+import stock from "./stock.json";
 
 class App extends Component {
 
@@ -35,7 +36,7 @@ class App extends Component {
         {/* <Submit /> */}
         {/* <HomePage /> */}
 
-        {/* <SearchResults comp={carpet}/> */}
+        <SearchResults comp={carpet} stock={stock}/>
       </div>
     );
   }
