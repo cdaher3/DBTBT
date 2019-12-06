@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import App from './App';
 import Submit from './Submit';
 import About from './About';
+import Documentation from './Documentation';
 import SearchResults from "./SearchResults";
 
 export default class NavbarPage extends Component {
@@ -32,7 +33,7 @@ export default class NavbarPage extends Component {
                 <MDBNavLink to={`/`}>Home</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to="/">Documentation</MDBNavLink>
+                <MDBNavLink to="/Documentation">Documentation</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
                 <MDBNavLink to = "/about"> About</MDBNavLink>
@@ -60,6 +61,7 @@ export default class NavbarPage extends Component {
         </MDBNavbar>
         <Switch>
           <Route path="/" exact component={Submit} />
+          <Route path="/Documentation" exact component={Documentation} />
           <Route path="/about" exact component={About} />
           <Route path="/search/:id" component={SearchResults}/>
         </Switch>
