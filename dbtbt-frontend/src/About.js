@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "./About.css";
-import Search from "./Search";
-import NavbarPage from "./NavbarPage";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import Yannis from "./images/IMG_0865.jpg"

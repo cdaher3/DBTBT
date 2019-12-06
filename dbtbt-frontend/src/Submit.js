@@ -14,10 +14,7 @@ import {
   MDBListGroup,
   MDBListGroupItem
 } from "mdbreact";
-import DocsLink from "./components/docsLink";
-import SectionContainer from "./components/sectionContainer";
 import "./Search.css";
-import NavbarPage from "./NavbarPage";
 import logo from "./images/dbtbtlogo.png";
 import SearchResults from "./SearchResults";
 import carpet from "./carpet.json";

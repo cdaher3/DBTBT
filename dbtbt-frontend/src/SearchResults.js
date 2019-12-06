@@ -19,10 +19,7 @@ import {
     MDBCardTitle,
     MDBCardText
 } from "mdbreact";
-import DocsLink from "./components/docsLink";
-import SectionContainer from "./components/sectionContainer";
 import "./Search.css";
-import NavbarPage from "./NavbarPage";
 import Carpet from "./carpet.json";
 import logo from "./images/dbtbtlogo.png";
 
