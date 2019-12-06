@@ -62,7 +62,6 @@ export default class SearchResults extends React.Component {
                     //     <span>Price: {item.price}, </span>
                     //     <span>Title: {item.title}</span>
                     //   </div>
-                    // azLink = "http://www.amazon.com/dp/" + ${item.asin};
                     link = "http://www.amazon.com/dp/" + item.asin,
                     <div className="results" key={index}>
                         <MDBCol>

@@ -51,7 +51,7 @@ export default class Submit extends React.Component {
 
   onFormSubmit = event => {
     event.preventDefault();
-    this.props.handleSubmit(this.state);
+    // this.props.handleSubmit(this.state);
     this.setState(this.initialState);
     console.log("clicked search");
     // console.log("state");
@@ -74,6 +74,7 @@ export default class Submit extends React.Component {
 
   render() {
     let { submit, query, data } = this.state;
+    console.log("submit state", this.state);
     return (
       <div>
         <h1> Don't Buy This, Buy That!</h1>
