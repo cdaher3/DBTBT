@@ -29,14 +29,12 @@ class App extends Component {
       <div>
         <NavbarPage />
         {/* <Submit handleSubmit={this.handleSubmit} /> */}
-
-        {/* <Main /> */}
         {/* <Search content={searchInput} /> */}
         {/* <Submit handleSubmit={this.handleSubmit} /> */}
         {/* <Submit /> */}
         {/* <HomePage /> */}
 
-        <SearchResults comp={carpet} stock={stock}/>
+        {/* <SearchResults comp={carpet} stock={stock}/> */}
       </div>
     );
   }
