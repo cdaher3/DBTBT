@@ -29,7 +29,7 @@ export default class NavbarPage extends Component {
           <MDBNavbarToggler onClick={this.toggleCollapse} />
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav left>
-              <MDBNavItem active>
+              <MDBNavItem >
                 <MDBNavLink to={`/`}>Home</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
@@ -60,7 +60,7 @@ export default class NavbarPage extends Component {
           </MDBCollapse>
         </MDBNavbar>
         <Switch>
-          <Route path="/" exact component={Submit} />
+          <Route path="/" exact component={Submit}/>
           <Route path="/documentation" exact component={Documentation} />
           <Route path="/docs" exact component={Documentation} />
           <Route path="/about" exact component={About} />
