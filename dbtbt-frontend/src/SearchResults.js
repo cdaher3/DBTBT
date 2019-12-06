@@ -24,7 +24,7 @@ import SectionContainer from "./components/sectionContainer";
 import "./Search.css";
 import NavbarPage from "./NavbarPage";
 import Carpet from "./carpet.json";
-import logo from "./dbtbtlogo.png";
+import logo from "./images/dbtbtlogo.png";
 
 export default class SearchResults extends React.Component {
     constructor(props) {

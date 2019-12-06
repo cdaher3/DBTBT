@@ -4,10 +4,10 @@ import Search from "./Search";
 import NavbarPage from "./NavbarPage";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
-import Yannis from "./IMG_0865.jpg"
-import Christian from "./IMG_0870.jpg"
-import Matthew from "./IMG_0871.jpg"
-import Bhogesh from "./IMG_0873.jpg"
+import Yannis from "./images/IMG_0865.jpg"
+import Christian from "./images/IMG_0870.jpg"
+import Matthew from "./images/IMG_0871.jpg"
+import Bhogesh from "./images/IMG_0873.jpg"
 
 export default class About extends Component {
   constructor(props) {

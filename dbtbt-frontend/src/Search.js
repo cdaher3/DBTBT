@@ -18,7 +18,7 @@ import DocsLink from "./components/docsLink";
 import SectionContainer from "./components/sectionContainer";
 import "./Search.css";
 import NavbarPage from './NavbarPage';
-import logo from "./dbtbtlogo.png";
+import logo from "./images/dbtbtlogo.png";
 
 export default class Search extends React.Component {
   constructor(props) {
