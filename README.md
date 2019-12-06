@@ -15,6 +15,5 @@ Authentication?
 [Matthew Lehoullier](https://github.com/cdaher3/DBTBT/blob/master/team/Matthew_Lehoullier.md)  
 
 
-# awstest Branch: root folder is currently pullable into the apache directory on the server  
-log in, cd to /var/www/html, run sudo git pull  
-if it doesn't work, sudo
+# frontend Branch:
+building a react frontend
