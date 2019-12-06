@@ -33,7 +33,7 @@ export default class NavbarPage extends Component {
                 <MDBNavLink to={`/`}>Home</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to="/Documentation">Documentation</MDBNavLink>
+                <MDBNavLink to="/documentation">Documentation</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
                 <MDBNavLink to = "/about"> About</MDBNavLink>
@@ -61,9 +61,10 @@ export default class NavbarPage extends Component {
         </MDBNavbar>
         <Switch>
           <Route path="/" exact component={Submit} />
-          <Route path="/Documentation" exact component={Documentation} />
+          <Route path="/documentation" exact component={Documentation} />
+          <Route path="/docs" exact component={Documentation} />
           <Route path="/about" exact component={About} />
-          <Route path="/search/:id" component={SearchResults}/>
+          <Route path="/search" component={SearchResults}/>
         </Switch>
       </Router>
     );
