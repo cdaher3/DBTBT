@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import "./About.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
-import Yannis from "./images/IMG_0865.jpg"
-import Christian from "./images/IMG_0870.jpg"
-import Matthew from "./images/IMG_0871.jpg"
-import Bhogesh from "./images/IMG_0873.jpg"
+import Yannis from "./images/AST00346.jpg"
+import Christian from "./images/AST00340.jpg"
+import Matthew from "./images/AST00338.jpg"
+import Bhogesh from "./images/AST00345.jpg"
 
 export default class About extends Component {
   constructor(props) {
