@@ -8,6 +8,7 @@ import App from './App';
 import Submit from './Submit';
 import About from './About';
 import Documentation from './Documentation';
+import Goal from "./Goal";
 import SearchResults from "./SearchResults";
 
 export default class NavbarPage extends Component {
@@ -33,6 +34,9 @@ export default class NavbarPage extends Component {
                 <MDBNavLink to={`/`}>Home</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
+                <MDBNavLink to="/Goal">Goal</MDBNavLink>
+              </MDBNavItem>
+              <MDBNavItem>
                 <MDBNavLink to="/documentation">Documentation</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
@@ -50,6 +54,7 @@ export default class NavbarPage extends Component {
         </MDBNavbar>
         <Switch>
           <Route path="/" exact component={Submit}/>
+          <Route path = "/Goal" exact component = {Goal}/>
           <Route path="/documentation" exact component={Documentation} />
           <Route path="/docs" exact component={Documentation} />
           <Route path="/about" exact component={About} />
