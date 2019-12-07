@@ -45,17 +45,6 @@ export default class NavbarPage extends Component {
                   <MDBIcon fab icon="github" />
                 </MDBNavLink>
               </MDBNavItem>
-              <MDBNavItem>
-                <MDBDropdown>
-                  <MDBDropdownToggle nav caret>
-                    <MDBIcon icon="user" />
-                  </MDBDropdownToggle>
-                  <MDBDropdownMenu className="dropdown-default">
-                    <MDBDropdownItem href="#!">Sign Up</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Login</MDBDropdownItem>
-                  </MDBDropdownMenu>
-                </MDBDropdown>
-              </MDBNavItem>
             </MDBNavbarNav>
           </MDBCollapse>
         </MDBNavbar>
