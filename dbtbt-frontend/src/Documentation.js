@@ -36,6 +36,13 @@ export default class Documentation extends Component {
             <h1 className="font-weight-light text-white">Documentation</h1>
           </div>
         </header>
+        <MDBCol>
+          <MDBCard className="docsCard">
+            <MDBCardBody>
+              <h3 className="docs">(Insert Documentation)</h3>
+            </MDBCardBody>
+          </MDBCard>
+        </MDBCol>
       </div>
     );
   }

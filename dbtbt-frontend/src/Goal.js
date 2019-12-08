@@ -43,7 +43,7 @@ export default class Documentation extends Component {
         <MDBCol>
           <MDBCard className="missionCard">
             <MDBCardBody>
-              <h4 className="mission"><i>To help people make better financial decisions, and invest in their future</i></h4>
+              <h3 className="mission"><i>To help people make better financial decisions, and invest in their future</i></h3>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
