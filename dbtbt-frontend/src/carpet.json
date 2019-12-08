@@ -1,1 +1,115 @@
-[{"asin":"B078FZ1734","discounted":false,"sponsored":false,"reviews":719,"rating":3.9,"score":"2804.10","savings":0,"price":"26.99","title":"YJ.GWL High Pile Velvet Bedroom Living Room Rug (47\" x 63\"), Extra Soft & Easy Clean Large Shaggy Area Rugs, Plush Carpet for Kids Nursery Room Decor, Green"},{"asin":"B01JJXMULU","discounted":false,"sponsored":false,"reviews":2511,"rating":4,"score":"10044.00","savings":0,"price":"26.99","title":"ACTCUT Super Soft Indoor Modern Shag Area Silky Smooth Fur Rugs Fluffy Rugs Anti-Skid Shaggy Area Rug Dining Room Home Bedroom Carpet Floor Mat 4- Feet by 5- Feet (Grey)"},{"asin":"B06XCF7QFR","discounted":false,"sponsored":false,"reviews":2970,"rating":3.8,"score":"11286.00","savings":0,"price":"26.98","title":"LOCHAS Ultra Soft Indoor Modern Area Rugs Fluffy Living Room Carpets Suitable for Children Bedroom Home Decor Nursery Rugs 4 Feet by 5.3 Feet (Gray)"},{"asin":"B010PDJEHQ","discounted":true,"sponsored":false,"reviews":309,"rating":4.4,"score":"1359.60","savings":15.769999999999996,"price":"64.05","before_discount":"79.82","title":"Rug Decor Contemporary Modern Boxes Area Rug, 5' 3\" by 7' 3\", Grey"},{"asin":"B07PLCSM5J","discounted":false,"sponsored":false,"reviews":107,"rating":4.4,"score":"470.80","savings":0,"price":"27.89","title":"Soft Bedroom Rugs - 4' x 5.3' Shaggy Floor Area Rug for Living Room Kids Room Home Decor Carpet by AND BEYOND INC, Grey"},{"asin":"B07R6TRV58","discounted":false,"sponsored":false,"reviews":7,"rating":4.8,"score":"33.60","savings":0,"price":"23.19","title":"Modern Shaggy Area Rug Pad| 39.3 x 60.2 Size | Ultra Soft, Luxury Carpet for Home, Bedroom, Living Room, Bathroom/Toilet| Grey, Plush| Decorative Footcloth/Floor Cover/Play Mat by Amy & Delle"},{"asin":"B01LZS117I","discounted":false,"sponsored":false,"reviews":2687,"rating":4.8,"score":"12897.60","savings":0,"price":"37.99","title":"Safavieh Hudson Shag Collection SGH280L Slate Blue and Ivory Moroccan Ogee Plush Area Rug (3' x 5')"},{"asin":"B075MZ7DSD","discounted":false,"sponsored":false,"reviews":472,"rating":4.5,"score":"2124.00","savings":0,"price":"19.89","title":"YJ.GWL Super Soft Faux Sheepskin Fur Area Rugs for Bedroom Floor Shaggy Plush Carpet White Faux Fur Rug Bedside Rugs, 2 x 3 Feet Rectangle"},{"asin":"B073X5J24V","discounted":true,"sponsored":false,"reviews":1059,"rating":4,"score":"4236.00","savings":29.139999999999993,"price":"39.85","before_discount":"68.99","title":"Antep Rugs Kashan King Collection Himalayas Oriental Polypropylene Indoor Area Rug (Maroon/Beige, 5' x 7')"},{"asin":"B01DWN6WS0","discounted":true,"sponsored":false,"reviews":2049,"rating":4.2,"score":"8605.80","savings":10.270000000000003,"price":"34.62","before_discount":"44.89","title":"nuLOOM Moroccan Blythe Area Rug, 4' x 6', Grey/Off-white"}]
+[
+    {
+        "asin": "B078FZ1734",
+        "discounted": false,
+        "sponsored": false,
+        "reviews": 719,
+        "rating": 3.9,
+        "score": "2804.10",
+        "savings": 0,
+        "price": "26.99",
+        "title": "YJ.GWL High Pile Velvet Bedroom Living Room Rug (47\" x 63\"), Extra Soft & Easy Clean Large Shaggy Area Rugs, Plush Carpet for Kids Nursery Room Decor, Green"
+    },
+    {
+        "asin": "B01JJXMULU",
+        "discounted": false,
+        "sponsored": false,
+        "reviews": 2511,
+        "rating": 4,
+        "score": "10044.00",
+        "savings": 0,
+        "price": "26.99",
+        "title": "ACTCUT Super Soft Indoor Modern Shag Area Silky Smooth Fur Rugs Fluffy Rugs Anti-Skid Shaggy Area Rug Dining Room Home Bedroom Carpet Floor Mat 4- Feet by 5- Feet (Grey)"
+    },
+    {
+        "asin": "B06XCF7QFR",
+        "discounted": false,
+        "sponsored": false,
+        "reviews": 2970,
+        "rating": 3.8,
+        "score": "11286.00",
+        "savings": 0,
+        "price": "26.98",
+        "title": "LOCHAS Ultra Soft Indoor Modern Area Rugs Fluffy Living Room Carpets Suitable for Children Bedroom Home Decor Nursery Rugs 4 Feet by 5.3 Feet (Gray)"
+    },
+    {
+        "asin": "B010PDJEHQ",
+        "discounted": true,
+        "sponsored": false,
+        "reviews": 309,
+        "rating": 4.4,
+        "score": "1359.60",
+        "savings": 15.769999999999996,
+        "price": "64.05",
+        "before_discount": "79.82",
+        "title": "Rug Decor Contemporary Modern Boxes Area Rug, 5' 3\" by 7' 3\", Grey"
+    },
+    {
+        "asin": "B07PLCSM5J",
+        "discounted": false,
+        "sponsored": false,
+        "reviews": 107,
+        "rating": 4.4,
+        "score": "470.80",
+        "savings": 0,
+        "price": "27.89",
+        "title": "Soft Bedroom Rugs - 4' x 5.3' Shaggy Floor Area Rug for Living Room Kids Room Home Decor Carpet by AND BEYOND INC, Grey"
+    },
+    {
+        "asin": "B07R6TRV58",
+        "discounted": false,
+        "sponsored": false,
+        "reviews": 7,
+        "rating": 4.8,
+        "score": "33.60",
+        "savings": 0,
+        "price": "23.19",
+        "title": "Modern Shaggy Area Rug Pad| 39.3 x 60.2 Size | Ultra Soft, Luxury Carpet for Home, Bedroom, Living Room, Bathroom/Toilet| Grey, Plush| Decorative Footcloth/Floor Cover/Play Mat by Amy & Delle"
+    },
+    {
+        "asin": "B01LZS117I",
+        "discounted": false,
+        "sponsored": false,
+        "reviews": 2687,
+        "rating": 4.8,
+        "score": "12897.60",
+        "savings": 0,
+        "price": "37.99",
+        "title": "Safavieh Hudson Shag Collection SGH280L Slate Blue and Ivory Moroccan Ogee Plush Area Rug (3' x 5')"
+    },
+    {
+        "asin": "B075MZ7DSD",
+        "discounted": false,
+        "sponsored": false,
+        "reviews": 472,
+        "rating": 4.5,
+        "score": "2124.00",
+        "savings": 0,
+        "price": "19.89",
+        "title": "YJ.GWL Super Soft Faux Sheepskin Fur Area Rugs for Bedroom Floor Shaggy Plush Carpet White Faux Fur Rug Bedside Rugs, 2 x 3 Feet Rectangle"
+    },
+    {
+        "asin": "B073X5J24V",
+        "discounted": true,
+        "sponsored": false,
+        "reviews": 1059,
+        "rating": 4,
+        "score": "4236.00",
+        "savings": 29.139999999999993,
+        "price": "39.85",
+        "before_discount": "68.99",
+        "title": "Antep Rugs Kashan King Collection Himalayas Oriental Polypropylene Indoor Area Rug (Maroon/Beige, 5' x 7')"
+    },
+    {
+        "asin": "B01DWN6WS0",
+        "discounted": true,
+        "sponsored": false,
+        "reviews": 2049,
+        "rating": 4.2,
+        "score": "8605.80",
+        "savings": 10.270000000000003,
+        "price": "34.62",
+        "before_discount": "44.89",
+        "title": "nuLOOM Moroccan Blythe Area Rug, 4' x 6', Grey/Off-white"
+    }
+]

@@ -36,26 +36,30 @@ export default class NavbarPage extends Component {
                 <MDBNavLink to="/documentation">Documentation</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to = "/about"> About</MDBNavLink>
+                <MDBNavLink to="/about"> About</MDBNavLink>
               </MDBNavItem>
             </MDBNavbarNav>
             <MDBNavbarNav right>
               <MDBNavItem>
-                <MDBNavLink className="waves-effect waves-light" to="#!">
-                  <MDBIcon fab icon="github" />
-                </MDBNavLink>
+                <a href="https://github.com/cdaher3/DBTBT"> GitHub</a>
+              </MDBNavItem>
+              <MDBNavItem>
+                {/* <MDBNavLink className="waves-effect waves-light" to="#!">
+                  <MDBIcon fab icon="twitter" />
+                </MDBNavLink> */}
               </MDBNavItem>
             </MDBNavbarNav>
           </MDBCollapse>
         </MDBNavbar>
         <Switch>
-          <Route path="/" exact component={Submit}/>
+          <Route path="/" exact component={Submit} />
           <Route path="/documentation" exact component={Documentation} />
           <Route path="/docs" exact component={Documentation} />
           <Route path="/about" exact component={About} />
-          <Route path="/search" component={SearchResults}/>
+          <Route path="/search/:id" exact component={SearchResults} />
         </Switch>
       </Router>
+
     );
   }
 }

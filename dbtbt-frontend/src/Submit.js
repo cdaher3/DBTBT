@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
 import {
   MDBInput,
   MDBFormInline,
@@ -51,7 +52,7 @@ export default class Submit extends React.Component {
   onFormSubmit = event => {
     event.preventDefault();
     // this.props.handleSubmit(this.state);
-    this.setState(this.initialState);
+    // this.setState(this.initialState);
     console.log("clicked search");
     // console.log("state");
     // console.log(this.state);
@@ -76,6 +77,7 @@ export default class Submit extends React.Component {
     console.log("submit state", this.state);
     console.log("submit data", this.state.data);
     return (
+      <Router>
       <div>
         <h1> Don't Buy This, Buy That!</h1>
         <h2> <img src={logo} alt="DBTBT Logo"></img></h2>
@@ -92,9 +94,11 @@ export default class Submit extends React.Component {
             <div className="buttons">
               <MDBRow>
                 <MDBBtn color="blue">Clear</MDBBtn>
+                <Link to = {`/search/${this.state.submit}`}>
                 <MDBBtn color="blue" type="submit">
                   Search
                 </MDBBtn>
+                </Link>
               </MDBRow>
             </div>
           </form>
@@ -103,6 +107,7 @@ export default class Submit extends React.Component {
           </div>
         </div >
       </div >
+      </Router>
     );
   }
 }
