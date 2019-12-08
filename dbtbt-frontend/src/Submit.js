@@ -80,7 +80,7 @@ export default class Submit extends React.Component {
         <Router>
           <div>
             <h1> Don't Buy This, Buy That!</h1>
-            <MDBAnimation type="bounce" infinite>
+            <MDBAnimation type="bounce">
             <img src={logo} alt="DBTBT Logo" className="logo"></img>
             </MDBAnimation>
             <div className="active-orange-4 active-blue-3 mb-3">
