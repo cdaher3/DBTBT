@@ -76,7 +76,7 @@ export default class Product extends React.Component {
         return (
             <Router>
                 <div>
-                    <header className="bg-primary text-center py-5 mb-4" >
+                    <header className="light-blue accent-4 text-center py-5 mb-4" >
                         <div className="container">
                             <h1 className="font-weight-light text-white">Buy That Stock!</h1>
                         </div>

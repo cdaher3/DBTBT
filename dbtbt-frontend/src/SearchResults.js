@@ -73,7 +73,7 @@ export default class SearchResults extends React.Component {
             return (
                 <div>
                     {/* <Submit/> */}
-                    <header className="bg-primary text-center py-5 mb-4" >
+                    <header className="light-blue accent-4 text-center py-5 mb-4" >
                         <div className="container">
                             <h1 className="font-weight-light text-white">Don't Buy This, Amazon Item</h1>
                         </div>
@@ -84,7 +84,7 @@ export default class SearchResults extends React.Component {
         return (
             <Router>
                 <div>
-                    <header className="bg-primary text-center py-5 mb-4" >
+                    <header className="light-blue accent-4 text-center py-5 mb-4" >
                         <div className="container">
                             <h1 className="font-weight-light text-white">Don't Buy This, Amazon Item</h1>
                         </div>
@@ -110,8 +110,10 @@ export default class SearchResults extends React.Component {
                                             <MDBCardText>
                                                 <span>Reviews: {item.reviews} </span>
                                             </MDBCardText>
-                                            <MDBBtn color="blue" href={`http://www.amazon.com/dp/${item.asin}`}>Don't Buy This</MDBBtn>
-                                            <MDBBtn color="blue" href={`/product/${item.price}`}>Buy That</MDBBtn>
+                                            <MDBRow className="resultButtons">
+                                                <MDBBtn color="blue" href={`http://www.amazon.com/dp/${item.asin}`}>Don't Buy This</MDBBtn>
+                                                <MDBBtn color="blue" href={`/product/${item.price}`}>Buy That</MDBBtn>
+                                            </MDBRow>
                                         </MDBCardBody>
                                     </MDBCard>
                                 </MDBCol>

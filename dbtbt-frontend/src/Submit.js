@@ -103,8 +103,6 @@ export default class Submit extends React.Component {
                   </MDBRow>
                 </div>
               </form>
-              <div className="results">
-              </div>
             </div >
           </div >
         </Router>

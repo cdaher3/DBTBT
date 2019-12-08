@@ -31,7 +31,7 @@ export default class Documentation extends Component {
   render() {
     return (
       <div>
-        <header className="bg-primary text-center py-5 mb-4" >
+        <header className="light-blue accent-4 text-center py-5 mb-4" >
           <div className="container">
             <h1 className="font-weight-light text-white">Documentation</h1>
           </div>

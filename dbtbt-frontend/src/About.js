@@ -18,7 +18,7 @@ export default class About extends Component {
     return (
       <div>
         
-        <header className="bg-primary text-center py-5 mb-4" >
+        <header className="light-blue accent-4 text-center py-5 mb-4" >
           <div className="container">
             <h1 className="font-weight-light text-white">The Team</h1>
           </div>
