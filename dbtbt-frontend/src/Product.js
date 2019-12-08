@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import {
+    MDBAnimation,
     MDBInput,
     MDBFormInline,
     MDBContainer,
@@ -55,7 +56,7 @@ export default class Product extends React.Component {
         this.setState({ display: true });
     }
 
-    goBack(){
+    goBack() {
         this.props.history.goBack();
     }
 
@@ -64,39 +65,49 @@ export default class Product extends React.Component {
         if (!this.state.display) {
             return (
                 <div>
-                    <h1> Buy That Stock!</h1>
+                    <header className="bg-primary text-center py-5 mb-4" >
+                        <div className="container">
+                            <h1 className="font-weight-light text-white">Buy That Stock!</h1>
+                        </div>
+                    </header>
                 </div>
             )
         }
         return (
             <Router>
                 <div>
-                    <h1>Buy That Stock!</h1>
-                    <MDBRow className="productButtons">
-                    <MDBBtn color="blue" onClick={this.goBack}>Back</MDBBtn>
-                    <MDBBtn color="blue" href="/">New Search</MDBBtn>
-                    </MDBRow>
-                    
-                    {this.state.data.map((item, index) => (
-                        <div className="results" key={index}>
-                            <MDBCol>
-                                <MDBCard className="stockCard">
-                                    <MDBCardBody>
-                                        <h3>{item.Ticker_symbol} - {item.Official_name}</h3>
-                                        <h4 className="price">
-                                            Price: ${item.Price}
-                                        </h4>
-                                        <MDBCardText className="stockPara">
-                                            Instead, buy {item.Official_name}'s stock for only ${item.Price} per share!
-                                        </MDBCardText>
-                                        <MDBBtn color="blue" target="_blank" href={`https://www.marketwatch.com/investing/stock/${item.Ticker_symbol}`}>More Info</MDBBtn>
-                                        <MDBBtn color="blue" target="_blank" href={`https://eresearch.fidelity.com/eresearch/evaluate/snapshot.jhtml?symbols=${item.Ticker_symbol}`}>Buy Now</MDBBtn>
-                                    </MDBCardBody>
-                                </MDBCard>
-                            </MDBCol>
+                    <header className="bg-primary text-center py-5 mb-4" >
+                        <div className="container">
+                            <h1 className="font-weight-light text-white">Buy That Stock!</h1>
                         </div>
-                    ))}
+                    </header>
+                    <MDBRow className="productButtons">
+                        <MDBBtn color="blue" onClick={this.goBack}>Back</MDBBtn>
+                        <MDBBtn color="blue" href="/">New Search</MDBBtn>
+                    </MDBRow>
+                    <MDBAnimation type="fadeIn" className="mappedResults">
+                        {this.state.data.map((item, index) => (
+                            <div className="results" key={index}>
+                                <MDBCol>
+                                    <MDBCard className="stockCard">
+                                        <MDBCardBody>
+                                            <h3>{item.Ticker_symbol} - {item.Official_name}</h3>
+                                            <h4 className="price">
+                                                Price: ${item.Price}
+                                            </h4>
+                                            <MDBCardText className="stockPara">
+                                                Instead, buy {item.Official_name}'s stock for only ${item.Price} per share!
+                                        </MDBCardText>
+                                            <MDBBtn color="blue" target="_blank" href={`https://www.marketwatch.com/investing/stock/${item.Ticker_symbol}`}>More Info</MDBBtn>
+                                            <MDBBtn color="blue" target="_blank" href={`https://eresearch.fidelity.com/eresearch/evaluate/snapshot.jhtml?symbols=${item.Ticker_symbol}`}>Buy Now</MDBBtn>
+                                        </MDBCardBody>
+                                    </MDBCard>
+                                </MDBCol>
+                            </div>
+                        ))}
+                    </MDBAnimation>
                 </div>
+
             </Router>
         );
     }

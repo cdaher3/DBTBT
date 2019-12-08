@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import {
+    MDBAnimation,
     MDBInput,
     MDBFormInline,
     MDBContainer,
@@ -88,32 +89,35 @@ export default class SearchResults extends React.Component {
                             <h1 className="font-weight-light text-white">Don't Buy This, Amazon Item</h1>
                         </div>
                     </header>
-                    <MDBRow className="newSearch">
-                        <MDBBtn color="blue" href="/">New Search</MDBBtn>
-                    </MDBRow>
-                    {this.state.id}
-                    {this.state.data.map((item, index, link) => (
-                        <div className="results" key={index}>
-                            <MDBCol>
-                                <MDBCard>
-                                    <MDBCardBody>
-                                        <h3>{item.title}</h3>
-                                        <MDBCardText>
-                                            Price: {item.price}
-                                        </MDBCardText>
-                                        <MDBCardText>
-                                            <span>Rating: {item.rating} </span>
-                                        </MDBCardText>
-                                        <MDBCardText>
-                                            <span>Reviews: {item.reviews} </span>
-                                        </MDBCardText>
-                                        <MDBBtn color="blue" href={`http://www.amazon.com/dp/${item.asin}`}>Don't Buy This</MDBBtn>
-                                        <MDBBtn color="blue" href={`/product/${item.price}`}>Buy That</MDBBtn>
-                                    </MDBCardBody>
-                                </MDBCard>
-                            </MDBCol>
-                        </div>
-                    ))}
+                    <MDBAnimation type="fadeInUp" className="mappedResults">
+
+                        <MDBRow className="newSearch">
+                            <MDBBtn color="blue" href="/">New Search</MDBBtn>
+                        </MDBRow>
+                        {this.state.id}
+                        {this.state.data.map((item, index, link) => (
+                            <div className="results" key={index}>
+                                <MDBCol>
+                                    <MDBCard>
+                                        <MDBCardBody>
+                                            <h3>{item.title}</h3>
+                                            <MDBCardText>
+                                                Price: {item.price}
+                                            </MDBCardText>
+                                            <MDBCardText>
+                                                <span>Rating: {item.rating} </span>
+                                            </MDBCardText>
+                                            <MDBCardText>
+                                                <span>Reviews: {item.reviews} </span>
+                                            </MDBCardText>
+                                            <MDBBtn color="blue" href={`http://www.amazon.com/dp/${item.asin}`}>Don't Buy This</MDBBtn>
+                                            <MDBBtn color="blue" href={`/product/${item.price}`}>Buy That</MDBBtn>
+                                        </MDBCardBody>
+                                    </MDBCard>
+                                </MDBCol>
+                            </div>
+                        ))}
+                    </MDBAnimation>
                 </div>
             </Router>
         );

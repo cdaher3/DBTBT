@@ -69,7 +69,7 @@
 .results{
   margin: auto;
   padding: 15px;
-  width: 80%;
+  /* width: 80%; */
 }
 
 .logo{
@@ -77,6 +77,13 @@
   margin-left: auto;
   margin-right: auto;
   padding: 15px;
+}
+
+.mappedResults{
+  /* margin: auto; */
+  margin: auto;
+  width: 75%;
+  justify-content: center;
 }
 
 /* Product Page CSS */
@@ -132,4 +139,11 @@ h4 {
 
 .header{
   background-color:  #1565c0 ;
+}
+
+/* Goal Page CSS */
+.missionCard {
+  margin: auto;
+  width: 75%;
+  justify-content: center;
 }

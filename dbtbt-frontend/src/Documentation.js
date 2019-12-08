@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import {
-  MDBEdgeHeader,
+  MDBAnimation,
   MDBInput,
   MDBFormInline,
   MDBContainer,
@@ -15,7 +15,12 @@ import {
   MDBModalFooter,
   MDBBtn,
   MDBListGroup,
-  MDBListGroupItem
+  MDBListGroupItem,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBCardTitle,
+  MDBCardText
 } from "mdbreact";
 
 export default class Documentation extends Component {
