@@ -30,11 +30,6 @@ export default class Submit extends React.Component {
     this.state = this.initialState;
   }
 
-  launch = (l) => {
-    console.log("launched!")
-    // <SearchResults comp={this.state.data}/>
-  }
-
   query = async (q) => {
     console.log("queried!");
     console.log(q);
@@ -44,7 +39,6 @@ export default class Submit extends React.Component {
         console.log("data", data)
         this.setState({ data })
         this.launch(data)
-        // <SearchResults comp={data}/>
       });
   }
 
@@ -53,8 +47,6 @@ export default class Submit extends React.Component {
     // this.props.handleSubmit(this.state);
     // this.setState(this.initialState);
     console.log("clicked search");
-    // console.log("state");
-    // console.log(this.state);
     this.query(this.state.query);
     if (this.state.submit != "") {
       this.setState({
@@ -68,6 +60,11 @@ export default class Submit extends React.Component {
     this.setState({
       [name]: value,
     });
+  };
+
+  click = event => {
+    let { name, value } = event.target;
+    this.setState(this.initialState);
   };
 
   render() {
@@ -90,11 +87,12 @@ export default class Submit extends React.Component {
                   name="submit"
                   value={submit}
                   placeholder="Search"
+                  initialValue=""
                   onChange={this.handleChange}
                 />
                 <div className="buttons">
                   <MDBRow>
-                    <MDBBtn color="blue" >Clear</MDBBtn>
+                    <MDBBtn color="blue" type="reset" onClick={this.click}>Clear</MDBBtn>
                     <MDBBtn color="blue" type="submit">
                       Search
                     </MDBBtn>
