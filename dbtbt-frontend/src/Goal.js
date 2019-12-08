@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import "./Goal.css";
-import Search from "./Search";
-import NavbarPage from "./NavbarPage";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 

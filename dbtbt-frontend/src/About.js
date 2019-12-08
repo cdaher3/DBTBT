@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./About.css";
+import "./Search.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import Yannis from "./images/AST00346.jpg"
