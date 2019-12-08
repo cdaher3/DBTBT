@@ -2,19 +2,20 @@
 
 The intent of this project is to build a website that helps its users make sound financial decisions. The website will, upon being provided with a product of some sort, instead refer the user to a similarly-priced investment option.  
 
-## Topic requirements  
-Data storage  
-Mobile  
-Server-Side?  
-Authentication?  
+## Topic Requirements Completed 
+Data Storage
+Server-Side
+Ajax
+Websockets
+Mobile
 
-## Team members
+## Team Members
 [Christian Daher](https://github.com/cdaher3/DBTBT/blob/master/team/Christian_Daher.md)  
 [Yannis Lam](https://github.com/cdaher3/DBTBT/blob/master/team/Yannis_Lam.md)  
 [Bhogesh Maddirala](https://github.com/cdaher3/DBTBT/blob/master/team/Bhogesh_Maddirala.md)  
 [Matthew Lehoullier](https://github.com/cdaher3/DBTBT/blob/master/team/Matthew_Lehoullier.md)  
   
-# Frontend structure  
+# Frontend Structure  
 ## index.js  
 This is the main component that renders the website.
 
@@ -36,7 +37,7 @@ This component fetches a json from the scraperclientjson.js and maps the results
 ## product.js
 This component fetches a json from query.js and maps the respective stock information to the page.
 
-# Backend structure  
+# Backend Structure  
 ## app.js  
 This is the main backend server. It manages and serves all API requests, both to the Amazon scraper hosted on GCP and the stock database.  
 
