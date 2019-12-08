@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
 import {
   MDBInput,
   MDBFormInline,
@@ -25,8 +25,7 @@ export default class Submit extends React.Component {
     super(props);
     this.initialState = {
       submit: "",
-      query: "",
-      data: [{}],
+      redirect: false,
     };
     this.state = this.initialState;
   }
@@ -57,57 +56,57 @@ export default class Submit extends React.Component {
     // console.log("state");
     // console.log(this.state);
     this.query(this.state.query);
+    if(this.state.submit != ""){
+      this.setState({
+        redirect: true,
+      });
+    }
   };
 
   handleChange = event => {
     let { name, value } = event.target;
-    // console.log(event);
-    // console.log(event.target);
-    // console.log(name);
-    // console.log(value);
-    let newQuery = "http://dbtbt.com:3001/search/" + value;
     this.setState({
       [name]: value,
-      "query": newQuery,
     });
   };
 
   render() {
+    console.log("state", this.state)
     let { submit, query, data } = this.state;
-    console.log("submit state", this.state);
-    console.log("submit data", this.state.data);
-    return (
-      <Router>
-      <div>
-        <h1> Don't Buy This, Buy That!</h1>
-        <h2> <img src={logo} alt="DBTBT Logo"></img></h2>
-        <div className="active-orange-4 active-blue-3 mb-3">
-          <form onSubmit={this.onFormSubmit}>
-            <input
-              className="form-control"
-              type="text"
-              name="submit"
-              value={submit}
-              placeholder="Search"
-              onChange={this.handleChange}
-            />
-            <div className="buttons">
-              <MDBRow>
-                <MDBBtn color="blue">Clear</MDBBtn>
-                <Link to = {`/search/${this.state.submit}`}>
-                <MDBBtn color="blue" type="submit">
-                  Search
-                </MDBBtn>
-                </Link>
-              </MDBRow>
-            </div>
-          </form>
-          <div className="results">
-            {query} 
-          </div>
-        </div >
-      </div >
-      </Router>
-    );
+    if (this.state.redirect) {
+      return (<Redirect to={`/search/${this.state.submit}`} />)
+    }
+    else {
+      return (
+        <Router>
+          <div>
+            <h1> Don't Buy This, Buy That!</h1>
+            <h2> <img src={logo} alt="DBTBT Logo"></img></h2>
+            <div className="active-orange-4 active-blue-3 mb-3">
+              <form onSubmit={this.onFormSubmit}>
+                <input
+                  className="form-control"
+                  type="text"
+                  name="submit"
+                  value={submit}
+                  placeholder="Search"
+                  onChange={this.handleChange}
+                />
+                <div className="buttons">
+                  <MDBRow>
+                    <MDBBtn color="blue">Clear</MDBBtn>
+                    <MDBBtn color="blue" type="submit">
+                      Search
+                    </MDBBtn>
+                  </MDBRow>
+                </div>
+              </form>
+              <div className="results">
+              </div>
+            </div >
+          </div >
+        </Router>
+      );
+    }
   }
 }

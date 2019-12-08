@@ -31,15 +31,15 @@ export default class SearchResults extends React.Component {
             id: null,
             data: [
                 {
-                    "asin": "B078FZ1734",
-                    "discounted": false,
-                    "sponsored": false,
-                    "reviews": 719,
-                    "rating": 3.9,
-                    "score": "2804.10",
+                    "asin": "",
+                    "discounted": null,
+                    "sponsored": null,
+                    "reviews": 0,
+                    "rating": 0,
+                    "score": "",
                     "savings": 0,
-                    "price": "26.99",
-                    "title": "YJ.GWL High Pile Velvet Bedroom Living Room Rug (47\" x 63\"), Extra Soft & Easy Clean Large Shaggy Area Rugs, Plush Carpet for Kids Nursery Room Decor, Green"
+                    "price": "",
+                    "title": ""
                 },
             ],
             display: false,
