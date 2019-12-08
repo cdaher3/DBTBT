@@ -29,17 +29,6 @@ export default class Product extends React.Component {
         this.state = {
             id: null,
             data: [
-                // {
-                //     "asin": "",
-                //     "discounted": null,
-                //     "sponsored": null,
-                //     "reviews": 0,
-                //     "rating": 0,
-                //     "score": "",
-                //     "savings": 0,
-                //     "price": "",
-                //     "title": ""
-                // },
             ],
             display: false,
         };
@@ -47,7 +36,7 @@ export default class Product extends React.Component {
 
     async componentDidMount() {
         const { id } = this.props.match.params;
-        let newQuery = "http://dbtbt.com:3001/search/" + id;
+        let newQuery = "http://dbtbt.com:3001/query/price=" + id;
         console.log(newQuery);
         await fetch(newQuery)
             .then(response => response.json())
@@ -55,7 +44,7 @@ export default class Product extends React.Component {
                 console.log("data", data)
                 this.setState(() => ({ data }))
             });
-        // this.setState({ display: true });
+        this.setState({ display: true });
     }
 
     render() {
@@ -63,17 +52,33 @@ export default class Product extends React.Component {
         if (!this.state.display) {
             return (
                 <div>
-                    {/* <Submit/> */}
-                    <h1> Don't Buy This, Buy That!</h1>
-                    <h2>Product Page</h2>
+                    <h1> Buy That Stock!</h1>
                 </div>
             )
         }
         return (
             <Router>
                 <div>
-                    <h1> Don't Buy This, Buy That!</h1>
-                    <h2>Product Page</h2>
+                    <h1>Buy That Stock!</h1>
+                    {this.state.data.map((item, index) => (
+                        <div className="results" key={index}>
+                            <MDBCol>
+                                <MDBCard>
+                                    <MDBCardBody>
+                                        <h3>{item.Ticker_symbol}</h3>
+                                        <MDBCardText>
+                                            Price: {item.Price}
+                                        </MDBCardText>
+                                        <MDBCardText>
+                                            <span>Name: {item.Official_name} </span>
+                                        </MDBCardText>
+                                        <MDBBtn color="blue" target="_blank" href={`https://www.marketwatch.com/investing/stock/${item.Ticker_symbol}`}>More Info</MDBBtn>
+                                        <MDBBtn color="blue" target="_blank" href={`https://eresearch.fidelity.com/eresearch/evaluate/snapshot.jhtml?symbols=${item.Ticker_symbol}`}>Buy Now</MDBBtn>
+                                    </MDBCardBody>
+                                </MDBCard>
+                            </MDBCol>
+                        </div>
+                    ))}
                 </div>
             </Router>
         );

@@ -48,18 +48,21 @@ export default class SearchResults extends React.Component {
     }
 
     findStock = async () => {
-        {this.state.data.map((item, index, link) => (
-            // console.log("item " + index, item.asin, item.price)
-           fetch(`http://dbtbt.com:3001/query/price=${item.price}`)
-           .then(response => 
-            // console.log("response", response)   
-            response.json()
-            )
-            // .then((data) => {
-            //     console.log("data", data)
-            //     this.setState(() => ({ stockQ : data }))
-            // })
-        ))}
+        {
+            this.state.data.map((item) => (
+                // console.log("item " + index, item.asin, item.price)
+                fetch(`http://dbtbt.com:3001/query/price=${item.price}`)
+                    .then(response => {
+                        // console.log("response", response)
+                        response.json()
+                    }
+                    )
+                    .then((data) => {
+                        console.log("data", data)
+                        // this.setState(() => ({ stockQ : data }))
+                    })
+            ))
+        }
     }
 
     render() {
@@ -69,16 +72,17 @@ export default class SearchResults extends React.Component {
             return (
                 <div>
                     {/* <Submit/> */}
-                    <h1> Don't Buy This, Buy That!</h1>
-                    <h2>Search Results</h2>
+                    <h1> Don't Buy This, Amazon Item</h1>
                 </div>
             )
         }
         return (
             <Router>
                 <div>
-                    <h1> Don't Buy This, Buy That!</h1>
-                    <h2>Search Results</h2>
+                    <h1> Don't Buy This, Amazon Item</h1>
+                    <MDBRow className="newSearch">
+                        <MDBBtn color="blue" href="/">New Search</MDBBtn>
+                    </MDBRow>
                     {this.state.id}
                     {this.state.data.map((item, index, link) => (
                         <div className="results" key={index}>
@@ -95,8 +99,8 @@ export default class SearchResults extends React.Component {
                                         <MDBCardText>
                                             <span>Reviews: {item.reviews} </span>
                                         </MDBCardText>
-                                        <MDBBtn color="blue" href={`http://www.amazon.com/dp/${item.asin}`}>Buy</MDBBtn>
-                                        <MDBBtn color="blue" href={`http://dbtbt.com:3001/query/price=${item.price}`}>Don't Buy</MDBBtn>
+                                        <MDBBtn color="blue" href={`http://www.amazon.com/dp/${item.asin}`}>Don't Buy This</MDBBtn>
+                                        <MDBBtn color="blue" href={`/product/${item.price}`}>Buy That</MDBBtn>
                                     </MDBCardBody>
                                 </MDBCard>
                             </MDBCol>
