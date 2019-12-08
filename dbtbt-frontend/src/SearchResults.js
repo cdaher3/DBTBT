@@ -72,14 +72,22 @@ export default class SearchResults extends React.Component {
             return (
                 <div>
                     {/* <Submit/> */}
-                    <h1> Don't Buy This, Amazon Item</h1>
+                    <header className="bg-primary text-center py-5 mb-4" >
+                        <div className="container">
+                            <h1 className="font-weight-light text-white">Don't Buy This, Amazon Item</h1>
+                        </div>
+                    </header>
                 </div>
             )
         }
         return (
             <Router>
                 <div>
-                    <h1> Don't Buy This, Amazon Item</h1>
+                    <header className="bg-primary text-center py-5 mb-4" >
+                        <div className="container">
+                            <h1 className="font-weight-light text-white">Don't Buy This, Amazon Item</h1>
+                        </div>
+                    </header>
                     <MDBRow className="newSearch">
                         <MDBBtn color="blue" href="/">New Search</MDBBtn>
                     </MDBRow>

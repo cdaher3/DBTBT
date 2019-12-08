@@ -1,10 +1,11 @@
 import React from "react";
 import { MDBEdgeHeader, MDBContainer, MDBRow, MDBCol, MDBJumbotron, MDBIcon, MDBAnimation } from "mdbreact";
 import MenuLink from "./components/menuLink";
-
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 const NavigationNavPage = () => {
   return (
     <>
+      <Router>
       <MDBEdgeHeader color="indigo darken-3" className="sectionPage" />
       <MDBAnimation type="zoomIn" duration="500ms">
         <MDBContainer>
@@ -27,6 +28,7 @@ const NavigationNavPage = () => {
           </MDBRow>
         </MDBContainer>
       </MDBAnimation>
+      </Router>
     </>
   );
 }
