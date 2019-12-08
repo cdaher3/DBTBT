@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
 import {
+  MDBAnimation,
   MDBInput,
   MDBFormInline,
   MDBContainer,
@@ -79,7 +80,9 @@ export default class Submit extends React.Component {
         <Router>
           <div>
             <h1> Don't Buy This, Buy That!</h1>
-            <h2> <img src={logo} alt="DBTBT Logo"></img></h2>
+            <MDBAnimation type="bounce" infinite>
+            <img src={logo} alt="DBTBT Logo" className="logo"></img>
+            </MDBAnimation>
             <div className="active-orange-4 active-blue-3 mb-3">
               <form onSubmit={this.onFormSubmit}>
                 <input
