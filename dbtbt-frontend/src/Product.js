@@ -32,6 +32,7 @@ export default class Product extends React.Component {
             ],
             display: false,
         };
+        this.goBack = this.goBack.bind(this);
     }
 
     async componentDidMount() {
@@ -47,6 +48,10 @@ export default class Product extends React.Component {
         this.setState({ display: true });
     }
 
+    goBack(){
+        this.props.history.goBack();
+    }
+
     render() {
         console.log("state!", this.state);
         if (!this.state.display) {
@@ -60,6 +65,11 @@ export default class Product extends React.Component {
             <Router>
                 <div>
                     <h1>Buy That Stock!</h1>
+                    <MDBRow className="productButtons">
+                    <MDBBtn color="blue" onClick={this.goBack}>Back</MDBBtn>
+                    <MDBBtn color="blue" href="/">New Search</MDBBtn>
+                    </MDBRow>
+                    
                     {this.state.data.map((item, index) => (
                         <div className="results" key={index}>
                             <MDBCol>

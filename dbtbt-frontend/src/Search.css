@@ -20,6 +20,14 @@
   justify-content: center;
 }
 
+.productButtons{
+  margin: auto;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+
 .results{
   margin: auto;
   padding: 15px;
