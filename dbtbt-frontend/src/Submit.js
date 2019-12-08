@@ -30,6 +30,7 @@ export default class Submit extends React.Component {
     this.state = this.initialState;
   }
 
+  //query may be used in the future
   query = async (q) => {
     console.log("queried!");
     console.log(q);

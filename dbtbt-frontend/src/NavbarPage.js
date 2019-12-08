@@ -11,6 +11,7 @@ import Documentation from './Documentation';
 import Goal from "./Goal";
 import SearchResults from "./SearchResults";
 import Product from "./Product";
+import Error4 from "./Error";
 
 export default class NavbarPage extends Component {
   state = {
@@ -64,6 +65,7 @@ export default class NavbarPage extends Component {
           <Route path="/about" exact component={About} />
           <Route path="/search/:id" exact component={SearchResults} />
           <Route path="/product/:id" component={Product} />
+          <Route path="/error" exact component={Error4} />
         </Switch>
       </Router>
 

@@ -31,6 +31,7 @@ export default class Product extends React.Component {
             data: [
             ],
             display: false,
+            error: false,
         };
         this.goBack = this.goBack.bind(this);
     }
@@ -45,6 +46,12 @@ export default class Product extends React.Component {
                 console.log("data", data)
                 this.setState(() => ({ data }))
             });
+        // if(this.state.data[0].Price > 0){
+        //     this.setState({ display: true });
+        // }
+        // else{
+        //     this.setState({ error: true });
+        // }
         this.setState({ display: true });
     }
 
@@ -73,14 +80,14 @@ export default class Product extends React.Component {
                     {this.state.data.map((item, index) => (
                         <div className="results" key={index}>
                             <MDBCol>
-                                <MDBCard>
+                                <MDBCard className="stockCard">
                                     <MDBCardBody>
-                                        <h3>{item.Ticker_symbol}</h3>
-                                        <MDBCardText>
-                                            Price: {item.Price}
-                                        </MDBCardText>
-                                        <MDBCardText>
-                                            <span>Name: {item.Official_name} </span>
+                                        <h3>{item.Ticker_symbol} - {item.Official_name}</h3>
+                                        <h4 className="price">
+                                            Price: ${item.Price}
+                                        </h4>
+                                        <MDBCardText className="stockPara">
+                                            Instead, buy {item.Official_name}'s stock for only ${item.Price} per share!
                                         </MDBCardText>
                                         <MDBBtn color="blue" target="_blank" href={`https://www.marketwatch.com/investing/stock/${item.Ticker_symbol}`}>More Info</MDBBtn>
                                         <MDBBtn color="blue" target="_blank" href={`https://eresearch.fidelity.com/eresearch/evaluate/snapshot.jhtml?symbols=${item.Ticker_symbol}`}>Buy Now</MDBBtn>

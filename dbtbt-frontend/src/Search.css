@@ -27,11 +27,9 @@
   justify-content: center;
 }
 
-
 .results{
   margin: auto;
   padding: 15px;
-  /* justify-content: center; */
   width: 80%;
 }
 
@@ -65,4 +63,14 @@ h4 {
 
 .newSearch {
   justify-content: center;
+}
+
+.stockCard {
+  margin: auto;
+  width: 75%;
+  justify-content: center;
+}
+
+.price{
+  text-align: center;
 }
