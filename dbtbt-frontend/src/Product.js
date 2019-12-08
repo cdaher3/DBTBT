@@ -55,7 +55,7 @@ export default class Product extends React.Component {
                 console.log("data", data)
                 this.setState(() => ({ data }))
             });
-        this.setState({ display: true });
+        // this.setState({ display: true });
     }
 
     render() {
@@ -65,7 +65,7 @@ export default class Product extends React.Component {
                 <div>
                     {/* <Submit/> */}
                     <h1> Don't Buy This, Buy That!</h1>
-                    <h2>Search Results</h2>
+                    <h2>Product Page</h2>
                 </div>
             )
         }
@@ -73,41 +73,7 @@ export default class Product extends React.Component {
             <Router>
                 <div>
                     <h1> Don't Buy This, Buy That!</h1>
-                    <h2>Search Results</h2>
-                    {this.state.id}
-                    {this.state.data.map((item, index, link) => (
-                        //   <div>
-                        //     <span>ASIN: {item.asin}, </span>
-                        //     <span>Discounted: {item.discounted}, </span>
-                        //     <span>Sponsored: {item.sponsored}, </span>
-                        //     <span>Reviews: {item.reviews}, </span>
-                        //     <span>Rating: {item.rating}, </span>
-                        //     <span>Score: {item.score}, </span>
-                        //     <span>Savings: {item.savings}, </span>
-                        //     <span>Price: {item.price}, </span>
-                        //     <span>Title: {item.title}</span>
-                        //   </div>
-                        <div className="results" key={index}>
-                            <MDBCol>
-                                <MDBCard>
-                                    <MDBCardBody>
-                                        <h3>{item.title}</h3>
-                                        <MDBCardText>
-                                            Price: {item.price}
-                                        </MDBCardText>
-                                        <MDBCardText>
-                                            <span>Rating: {item.rating} </span>
-                                        </MDBCardText>
-                                        <MDBCardText>
-                                            <span>Reviews: {item.reviews} </span>
-                                        </MDBCardText>
-                                        <MDBBtn color="blue" href={`http://www.amazon.com/dp/${item.asin}`}>Buy</MDBBtn>
-                                        <MDBBtn color="blue" href={`${item.asin}`}>Don't Buy</MDBBtn>
-                                    </MDBCardBody>
-                                </MDBCard>
-                            </MDBCol>
-                        </div>
-                    ))}
+                    <h2>Product Page</h2>
                 </div>
             </Router>
         );

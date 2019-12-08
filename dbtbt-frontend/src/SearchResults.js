@@ -28,20 +28,9 @@ export default class SearchResults extends React.Component {
         super(props);
         this.state = {
             id: null,
-            data: [
-                // {
-                //     "asin": "",
-                //     "discounted": null,
-                //     "sponsored": null,
-                //     "reviews": 0,
-                //     "rating": 0,
-                //     "score": "",
-                //     "savings": 0,
-                //     "price": "",
-                //     "title": ""
-                // },
-            ],
+            data: [],
             display: false,
+            stockQ: "",
         };
     }
 
@@ -58,7 +47,23 @@ export default class SearchResults extends React.Component {
         this.setState({ display: true });
     }
 
+    findStock = async () => {
+        {this.state.data.map((item, index, link) => (
+            // console.log("item " + index, item.asin, item.price)
+           fetch(`http://dbtbt.com:3001/query/price=${item.price}`)
+           .then(response => 
+            // console.log("response", response)   
+            response.json()
+            )
+            // .then((data) => {
+            //     console.log("data", data)
+            //     this.setState(() => ({ stockQ : data }))
+            // })
+        ))}
+    }
+
     render() {
+        this.findStock()
         console.log("state!", this.state);
         if (!this.state.display) {
             return (
@@ -76,17 +81,6 @@ export default class SearchResults extends React.Component {
                     <h2>Search Results</h2>
                     {this.state.id}
                     {this.state.data.map((item, index, link) => (
-                        //   <div>
-                        //     <span>ASIN: {item.asin}, </span>
-                        //     <span>Discounted: {item.discounted}, </span>
-                        //     <span>Sponsored: {item.sponsored}, </span>
-                        //     <span>Reviews: {item.reviews}, </span>
-                        //     <span>Rating: {item.rating}, </span>
-                        //     <span>Score: {item.score}, </span>
-                        //     <span>Savings: {item.savings}, </span>
-                        //     <span>Price: {item.price}, </span>
-                        //     <span>Title: {item.title}</span>
-                        //   </div>
                         <div className="results" key={index}>
                             <MDBCol>
                                 <MDBCard>
@@ -102,7 +96,7 @@ export default class SearchResults extends React.Component {
                                             <span>Reviews: {item.reviews} </span>
                                         </MDBCardText>
                                         <MDBBtn color="blue" href={`http://www.amazon.com/dp/${item.asin}`}>Buy</MDBBtn>
-                                        <MDBBtn color="blue" href={`${item.asin}`}>Don't Buy</MDBBtn>
+                                        <MDBBtn color="blue" href={`http://dbtbt.com:3001/query/price=${item.price}`}>Don't Buy</MDBBtn>
                                     </MDBCardBody>
                                 </MDBCard>
                             </MDBCol>
