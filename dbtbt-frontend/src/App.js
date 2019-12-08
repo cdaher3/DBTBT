@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./Search.css";
 import Search from "./Search";
 import Submit from "./Submit";
 import NavbarPage from "./NavbarPage";

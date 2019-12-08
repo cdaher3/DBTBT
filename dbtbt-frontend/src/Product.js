@@ -23,7 +23,7 @@ import {
 import "./Search.css";
 import Submit from "./Submit";
 
-export default class SearchResults extends React.Component {
+export default class Product extends React.Component {
     constructor(props) {
         super(props);
         this.state = {

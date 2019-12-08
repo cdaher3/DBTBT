@@ -56,7 +56,7 @@ export default class Submit extends React.Component {
     // console.log("state");
     // console.log(this.state);
     this.query(this.state.query);
-    if(this.state.submit != ""){
+    if (this.state.submit != "") {
       this.setState({
         redirect: true,
       });
@@ -94,7 +94,7 @@ export default class Submit extends React.Component {
                 />
                 <div className="buttons">
                   <MDBRow>
-                    <MDBBtn color="blue">Clear</MDBBtn>
+                    <MDBBtn color="blue" >Clear</MDBBtn>
                     <MDBBtn color="blue" type="submit">
                       Search
                     </MDBBtn>
