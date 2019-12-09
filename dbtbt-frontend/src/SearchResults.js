@@ -19,7 +19,8 @@ import {
     MDBCardBody,
     MDBCardImage,
     MDBCardTitle,
-    MDBCardText
+    MDBCardText,
+    MDBCardGroup
 } from "mdbreact";
 import "./Search.css";
 import Submit from "./Submit";
@@ -72,7 +73,6 @@ export default class SearchResults extends React.Component {
         if (!this.state.display) {
             return (
                 <div>
-                    {/* <Submit/> */}
                     <header className="light-blue accent-4 text-center py-5 mb-4" >
                         <div className="container">
                             <h1 className="font-weight-light text-white">Don't Buy This, Amazon Item</h1>
@@ -98,24 +98,33 @@ export default class SearchResults extends React.Component {
                         {this.state.data.map((item, index, link) => (
                             <div className="results" key={index}>
                                 <MDBCol>
-                                    <MDBCard>
-                                        <MDBCardBody>
-                                            <h3>{item.title}</h3>
-                                            <MDBCardText>
-                                                Price: {item.price}
-                                            </MDBCardText>
-                                            <MDBCardText>
-                                                <span>Rating: {item.rating} </span>
-                                            </MDBCardText>
-                                            <MDBCardText>
-                                                <span>Reviews: {item.reviews} </span>
-                                            </MDBCardText>
-                                            <MDBRow className="resultButtons">
-                                                <MDBBtn color="blue" href={`http://www.amazon.com/dp/${item.asin}`}>Don't Buy This</MDBBtn>
-                                                <MDBBtn color="blue" href={`/product/${item.price}`}>Buy That</MDBBtn>
-                                            </MDBRow>
-                                        </MDBCardBody>
-                                    </MDBCard>
+                                    <MDBCardGroup deck className='mt-3'>
+                                        <MDBCard>
+                                            {/* <div>
+                                                <MDBCardImage className="img-fluid cardImage" src={item.thumbnail} waves hover overlay='white-slight' />
+                                            </div> */}
+                                            <div>
+                                                <MDBCardBody>
+                                                    <h3>{item.title}</h3>
+
+                                                    <MDBCardText>
+                                                        Price: {item.price}
+                                                    </MDBCardText>
+                                                    <MDBCardText>
+                                                        <span>Rating: {item.rating} </span>
+                                                    </MDBCardText>
+                                                    <MDBCardText>
+                                                        <span>Reviews: {item.reviews} </span>
+                                                    </MDBCardText>
+
+                                                    <MDBRow className="resultButtons">
+                                                        <MDBBtn color="blue" href={`http://www.amazon.com/dp/${item.asin}`}>Don't Buy This</MDBBtn>
+                                                        <MDBBtn color="blue" href={`/product/${item.price}`}>Buy That</MDBBtn>
+                                                    </MDBRow>
+                                                </MDBCardBody>
+                                            </div>
+                                        </MDBCard>
+                                    </MDBCardGroup>
                                 </MDBCol>
                             </div>
                         ))}

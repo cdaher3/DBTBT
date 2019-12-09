@@ -78,7 +78,7 @@ export default class Submit extends React.Component {
     else {
       return (
         <Router>
-          <div>
+          <div className="page">
             <h1> Don't Buy This, Buy That!</h1>
             <MDBAnimation type="bounce">
             <img src={logo} alt="DBTBT Logo" className="logo"></img>
