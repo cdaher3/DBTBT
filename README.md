@@ -2,20 +2,42 @@
 
 The intent of this project is to build a website that helps its users make sound financial decisions. The website will, upon being provided with a product of some sort, instead refer the user to a similarly-priced investment option.  
 
-## Topic requirements  
-Data storage  
+## Topic Requirements Completed 
+Data Storage  
+Server-Side  
+Ajax  
+Websockets  
 Mobile  
-Server-Side?  
-Authentication?  
 
-## Team members
+## Team Members
 [Christian Daher](https://github.com/cdaher3/DBTBT/blob/master/team/Christian_Daher.md)  
 [Yannis Lam](https://github.com/cdaher3/DBTBT/blob/master/team/Yannis_Lam.md)  
 [Bhogesh Maddirala](https://github.com/cdaher3/DBTBT/blob/master/team/Bhogesh_Maddirala.md)  
 [Matthew Lehoullier](https://github.com/cdaher3/DBTBT/blob/master/team/Matthew_Lehoullier.md)  
   
-  
-# Backend structure  
+# Frontend Structure  
+## index.js  
+This is the main component that renders the website.
+
+## app.js
+This component is used for testing different components.
+
+## navbarpage.js
+This component routes all of the different react components.
+
+## submit.js
+This is the component that is the landing page on the website. It is a contains a form. When a user submits an input, it route redirects to the SearchResults.js component.
+
+## search.js
+This component contains experimental search live mapping.
+
+## searchresults.js
+This component fetches a json from the scraperclientjson.js and maps the results to the page. Each item is mapped to its corresponding amazon item and a stock price of similar value.
+
+## product.js
+This component fetches a json from query.js and maps the respective stock information to the page.
+
+# Backend Structure  
 ## app.js  
 This is the main backend server. It manages and serves all API requests, both to the Amazon scraper hosted on GCP and the stock database.  
 
