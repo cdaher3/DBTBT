@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
+import invest from "./images/invest.jpg"
 import {
   MDBAnimation,
   MDBInput,
@@ -43,9 +44,12 @@ export default class Documentation extends Component {
         <MDBCol>
           <MDBCard className="missionCard">
             <MDBCardBody>
-              <h3 className="mission"><i>To help people make better financial decisions, and invest in their future</i></h3>
+              <h3 className="mission"><i>Helping people make better financial decisions, and investing in their future</i></h3>
             </MDBCardBody>
           </MDBCard>
+          <MDBCardBody>
+              <h3><img src={invest} height = "300" width = "600"></img></h3>
+            </MDBCardBody>
         </MDBCol>
       </div>
     );

@@ -12,6 +12,8 @@ import Goal from "./Goal";
 import SearchResults from "./SearchResults";
 import Product from "./Product";
 import Error4 from "./Error";
+import logo from "./images/dbtbtlogo.png";
+
 
 export default class NavbarPage extends Component {
   state = {
@@ -39,7 +41,7 @@ export default class NavbarPage extends Component {
                 <MDBNavLink to="/goal">Goal</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to="/documentation">Documentation</MDBNavLink>
+                <MDBNavLink to="/documentation">How It Works</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
                 <MDBNavLink to="/about"> About</MDBNavLink>
