@@ -48,7 +48,7 @@ export default class Documentation extends Component {
             </MDBCardBody>
           </MDBCard>
           <MDBCardBody>
-              <h3><img src={invest} height = "300" width = "600"></img></h3>
+              <h3><img src={invest} height = "300" width = "250"></img></h3>
             </MDBCardBody>
         </MDBCol>
       </div>

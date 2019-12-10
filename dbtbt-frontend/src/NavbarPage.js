@@ -49,7 +49,7 @@ export default class NavbarPage extends Component {
             </MDBNavbarNav>
             <MDBNavbarNav right>
               <MDBNavItem>
-                <a href="https://github.com/cdaher3/DBTBT"> GitHub</a>
+                <MDBNavLink to="Github"> Github</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
                 {/* <MDBNavLink className="waves-effect waves-light" to="#!">
@@ -62,6 +62,11 @@ export default class NavbarPage extends Component {
         <Switch>
           <Route path="/" exact component={Submit}/>
           <Route path = "/goal" exact component = {Goal}/>
+          <Route path='/github' component={() => { 
+          window.location.href = "https://github.com/cdaher3/DBTBT"; 
+          return null;
+          }}/>
+          <Route path = "https://github.com/cdaher3/DBTBT"/>
           <Route path="/documentation" exact component={Documentation} />
           <Route path="/docs" exact component={Documentation} />
           <Route path="/about" exact component={About} />
