@@ -81,7 +81,7 @@ export default class Submit extends React.Component {
           <div className="page">
             <h1> Don't Buy This, Buy That!</h1>
             <MDBAnimation type="bounce">
-            <img src={logo} alt="DBTBT Logo" className="logo" height = "200"width = "150"></img>
+            <img src={logo} alt="DBTBT Logo" className="logo" height = "200"width = "200"></img>
             </MDBAnimation>
             <div className="active-orange-4 active-blue-3 mb-3">
               <form onSubmit={this.onFormSubmit}>
