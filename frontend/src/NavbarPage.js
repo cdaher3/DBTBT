@@ -8,7 +8,12 @@ import App from './App';
 import Submit from './Submit';
 import About from './About';
 import Documentation from './Documentation';
+import Goal from "./Goal";
 import SearchResults from "./SearchResults";
+import Product from "./Product";
+import Error4 from "./Error";
+import logo from "./images/dbtbtlogo.png";
+
 
 export default class NavbarPage extends Component {
   state = {
@@ -33,29 +38,44 @@ export default class NavbarPage extends Component {
                 <MDBNavLink to={`/`}>Home</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to="/documentation">Documentation</MDBNavLink>
+                <MDBNavLink to="/goal">Goal</MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to = "/about"> About</MDBNavLink>
+                <MDBNavLink to="/documentation">How It Works</MDBNavLink>
+              </MDBNavItem>
+              <MDBNavItem>
+                <MDBNavLink to="/about"> About</MDBNavLink>
               </MDBNavItem>
             </MDBNavbarNav>
             <MDBNavbarNav right>
               <MDBNavItem>
-                <MDBNavLink className="waves-effect waves-light" to="#!">
-                  <MDBIcon fab icon="github" />
-                </MDBNavLink>
+                <MDBNavLink to="Github"> Github</MDBNavLink>
+              </MDBNavItem>
+              <MDBNavItem>
+                {/* <MDBNavLink className="waves-effect waves-light" to="#!">
+                  <MDBIcon fab icon="twitter" />
+                </MDBNavLink> */}
               </MDBNavItem>
             </MDBNavbarNav>
           </MDBCollapse>
         </MDBNavbar>
         <Switch>
           <Route path="/" exact component={Submit}/>
+          <Route path = "/goal" exact component = {Goal}/>
+          <Route path='/github' component={() => { 
+          window.location.href = "https://github.com/cdaher3/DBTBT"; 
+          return null;
+          }}/>
+          <Route path = "https://github.com/cdaher3/DBTBT"/>
           <Route path="/documentation" exact component={Documentation} />
           <Route path="/docs" exact component={Documentation} />
           <Route path="/about" exact component={About} />
-          <Route path="/search" component={SearchResults}/>
+          <Route path="/search/:id" exact component={SearchResults} />
+          <Route path="/product/:id" component={Product} />
+          <Route path="/error" exact component={Error4} />
         </Switch>
       </Router>
+
     );
   }
 }

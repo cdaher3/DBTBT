@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
 import {
+  MDBAnimation,
   MDBInput,
   MDBFormInline,
   MDBContainer,
@@ -24,17 +26,12 @@ export default class Submit extends React.Component {
     super(props);
     this.initialState = {
       submit: "",
-      query: "",
-      data: [{}],
+      redirect: false,
     };
     this.state = this.initialState;
   }
 
-  launch = (l) => {
-    console.log("launched!")
-    // <SearchResults comp={this.state.data}/>
-  }
-
+  //query may be used in the future
   query = async (q) => {
     console.log("queried!");
     console.log(q);
@@ -44,65 +41,72 @@ export default class Submit extends React.Component {
         console.log("data", data)
         this.setState({ data })
         this.launch(data)
-        // <SearchResults comp={data}/>
       });
   }
 
   onFormSubmit = event => {
     event.preventDefault();
     // this.props.handleSubmit(this.state);
-    this.setState(this.initialState);
+    // this.setState(this.initialState);
     console.log("clicked search");
-    // console.log("state");
-    // console.log(this.state);
     this.query(this.state.query);
+    if (this.state.submit != "") {
+      this.setState({
+        redirect: true,
+      });
+    }
   };
 
   handleChange = event => {
     let { name, value } = event.target;
-    // console.log(event);
-    // console.log(event.target);
-    // console.log(name);
-    // console.log(value);
-    let newQuery = "http://dbtbt.com:3001/search/" + value;
     this.setState({
       [name]: value,
-      "query": newQuery,
     });
   };
 
+  click = event => {
+    let { name, value } = event.target;
+    this.setState(this.initialState);
+  };
+
   render() {
+    console.log("state", this.state)
     let { submit, query, data } = this.state;
-    console.log("submit state", this.state);
-    console.log("submit data", this.state.data);
-    return (
-      <div>
-        <h1> Don't Buy This, Buy That!</h1>
-        <h2> <img src={logo} alt="DBTBT Logo"></img></h2>
-        <div className="active-orange-4 active-blue-3 mb-3">
-          <form onSubmit={this.onFormSubmit}>
-            <input
-              className="form-control"
-              type="text"
-              name="submit"
-              value={submit}
-              placeholder="Search"
-              onChange={this.handleChange}
-            />
-            <div className="buttons">
-              <MDBRow>
-                <MDBBtn color="blue">Clear</MDBBtn>
-                <MDBBtn color="blue" type="submit">
-                  Search
-                </MDBBtn>
-              </MDBRow>
-            </div>
-          </form>
-          <div className="results">
-            {query} 
-          </div>
-        </div >
-      </div >
-    );
+    if (this.state.redirect) {
+      return (<Redirect to={`/search/${this.state.submit}`} />)
+    }
+    else {
+      return (
+        <Router>
+          <div className="page">
+            <h1> Don't Buy This, Buy That!</h1>
+            <MDBAnimation type="bounce">
+            <img src={logo} alt="DBTBT Logo" className="logo" height = "200"width = "200"></img>
+            </MDBAnimation>
+            <div className="active-orange-4 active-blue-3 mb-3">
+              <form onSubmit={this.onFormSubmit}>
+                <input
+                  className="form-control"
+                  type="text"
+                  name="submit"
+                  value={submit}
+                  placeholder="Search"
+                  initialValue=""
+                  onChange={this.handleChange}
+                />
+                <div className="buttons">
+                  <MDBRow>
+                    <MDBBtn color="blue" type="reset" onClick={this.click}>Clear</MDBBtn>
+                    <MDBBtn color="blue" type="submit">
+                      Search
+                    </MDBBtn>
+                  </MDBRow>
+                </div>
+              </form>
+            </div >
+          </div >
+        </Router>
+      );
+    }
   }
 }

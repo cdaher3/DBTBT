@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./Search.css";
 import Search from "./Search";
 import Submit from "./Submit";
-import NavbarPage from "./NavbarPage";
 import SearchResults from "./SearchResults";
 import About from './About';
+
+import NavbarPage from "./NavbarPage";
+import FooterPage from "./FooterPage";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import carpet from "./carpet.json";
-import stock from "./stock.json";
 
 class App extends Component {
 
@@ -23,18 +22,18 @@ class App extends Component {
 
   render() {
     console.log("app state", this.state);
-    // console.log(this.state.characters);
-    // console.log(carpet);
+
     return (
       <div>
         <NavbarPage />
+        {/* <NavigationNavPage/> */}
         {/* <Submit handleSubmit={this.handleSubmit} /> */}
         {/* <Search content={searchInput} /> */}
         {/* <Submit handleSubmit={this.handleSubmit} /> */}
         {/* <Submit /> */}
         {/* <HomePage /> */}
-
         {/* <SearchResults comp={carpet} stock={stock}/> */}
+        {/* <FooterPage/> */}
       </div>
     );
   }

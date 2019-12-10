@@ -20,6 +20,7 @@ import "./Search.css";
 import NavbarPage from './NavbarPage';
 import logo from "./images/dbtbtlogo.png";
 
+// Class has ability for live searchbar feedback, may implement into submit.js in the future 
 export default class Search extends React.Component {
   constructor(props) {
     super(props);
